@@ -44,6 +44,17 @@ features:
     },
     {
       icon:
+        {
+          light: "/icon/proxmoxve.svg",
+          dark: "/icon/proxmoxve.svg",
+          height: "48",
+        },
+      title: "ProxmoxVE",
+      link: "./atruenas/",
+      linkText: "查看文档",
+    },
+    {
+      icon:
         { light: "/icon/truenas.svg", dark: "/icon/truenas.svg", height: "48" },
       title: "TrueNAS",
       link: "./atruenas/",
@@ -57,9 +68,26 @@ features:
       linkText: "查看文档",
     },
     {
+      icon: { light: "/icon/mysql.svg", dark: "/icon/mysql.svg", height: "48" },
+      title: "MySQL",
+      link: "./atruenas/",
+      linkText: "查看文档",
+    },
+    {
       icon:
         { light: "/icon/onedev.svg", dark: "/icon/onedev.svg", height: "48" },
       title: "OneDev",
+      link: "./aonedev/",
+      linkText: "查看文档",
+    },
+    {
+      icon:
+        {
+          light: "/icon/jellyfin.svg",
+          dark: "/icon/jellyfin.svg",
+          height: "48",
+        },
+      title: "Jellyfin",
       link: "./aonedev/",
       linkText: "查看文档",
     },
