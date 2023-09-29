@@ -113,7 +113,8 @@ export default defineConfig({
       { text: '首页', link: '/', activeMatch: '' },
       { text: 'VitePress', link: '/avitepress/', activeMatch: '/avitepress/'},
       { text: 'OpenCore', link: '/aopencore/', activeMatch: '/aopencore/'},
-      { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'}
+      { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'},
+      {text:'Python',link:'/apython/',activeMatch:'/apython/'}
     ],
 
     sidebar: {
@@ -181,13 +182,41 @@ export default defineConfig({
           text:'定制优化'
         }
       ],
-      '/adocker':[
+      '/adocker/':[
         {
           text:'Docker',
           items:[
             {
               text:'开始',
               link:'/adocker/index'
+            }
+          ]
+        }
+      ],
+      '/apython/':[
+        {
+          text:'Python',
+          items:[
+            {
+              text:'开始',
+              link:'/apython/index'
+            }
+          ]
+        },
+        {
+          text:'Django',
+          items:[
+            {
+              text:'开始',
+              link:'/apython/adjangoa'
+            },
+            {
+              text:'创建',
+              link:'/apython/adjangob'
+            },
+            {
+              text:'第一个 Django 应用程序 - 1',
+              link:'/apython/bdjangoa'
             }
           ]
         }
