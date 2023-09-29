@@ -217,6 +217,10 @@ export default defineConfig({
             {
               text:'第一个 Django 应用程序 - 1',
               link:'/apython/bdjangoa'
+            },
+            {
+              text:'第一个 Django 应用程序 - 2',
+              link:'/apython/bdjangob'
             }
           ]
         }

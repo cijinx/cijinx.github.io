@@ -79,3 +79,69 @@ Quit the server with CONTROL-C.
 :::
 
 通过浏览器访问 `http://127.0.0.1:8000/` 会在页面中看到一个起飞的火箭。
+
+## 创建投票应用
+
+以上运行的一个项目已经配置完成，可以进行开发工作了。
+项目可以认为是整个服务，而项目中的应用是完成特定功能的一个子服务。Django 开发约定功能开发功能基于应用。
+
+创建应用确保终端的目录下有 `manage.py` 文件:
+
+```sh
+python manage.py startapp polls
+```
+
+这将创建一个目录:
+
+```json
+./polls/ // 应用 polls
+├─ __init__.py
+├─ admin.py
+├─ apps.py
+├─ migrations
+│  └─ __init__.py
+├─ models.py
+├─ tests.py
+└─ views.py
+```
+
+1. 编辑视图
+
+```py
+from django.shortcuts import render, HttpResponse
+
+# Create your views here.
+
+def index(request):
+    return HttpResponse('Hello Django 投票系统')
+
+```
+
+2. 创建子路由
+
+   - 创建 `./polls/urls.py`
+   - 将视图与路由绑定
+
+   ```py
+   from django.urls import path
+
+   from . import views
+
+   urlpatterns = [
+       path("", views.index, name="index"),
+   ]
+   ```
+
+3. 子路由绑定根路由
+
+   ```py
+   from django.contrib import admin
+   from django.urls import path, include // [!code focus]
+
+   urlpatterns = [
+       path('admin/', admin.site.urls),
+       path('polls', include('polls.urls')) // [!code focus]
+   ]
+   ```
+
+启动服务，浏览器访问 `http://localhost:8000/polls` 可以看到 `Hello Django 投票系统`。
