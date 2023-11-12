@@ -112,3 +112,74 @@ def index(request):
        context = {"latest_question_list": latest_question_list}
        return render(request, "polls/index.html", context)
    ```
+
+## 去除模版中的硬编码 URL
+
+在上一步骤中模版中的链接是硬编码的。问题在于，硬编码和强耦合的链接，对于一个包含很多应用的项目来说，修改起来是十分困难的。然而，因为你在 `polls.urls` 的 `url()` 函数中通过 `name` 参数为 URL 定义了名字，可以使用 `{% url %}` 标签代替它。
+
+修改模版 `/polls/templates/polls/index.html` 中的链接：
+
+```html
+<a href="{% url 'detail' question.id %}">{{ question.question_text }}</a>
+```
+
+## 为 URL 名称添加命名空间
+
+此文档的项目中只包含一个应用 `polls` ，在一个真实的 Django 项目中可能会包含很多的应用。Django 通过命名空间来分辨 URL 名称。例如 `polls` 中有 `detail` ，其他的应用中可能也有 `detail` 。Django 需要通过命名空间来指定访问的 URL 名称 `polls:detail` 来确定哪个应用的 `detail` 。
+
+设置方法：
+
+- 在 `/polls/urls.py` 添加 `app_name` 配置命名空间：
+
+```py
+from django.urls import path, include
+from . import views
+
+# 命名空间
+app_name = "polls" // [!code hl]
+
+urlpatterns = [
+   ......
+]
+```
+
+- 修改模版 `/polls/templates/polls/index.html` 中的链接：
+
+```html
+<a href="{% url 'dpolls:detail' question.id %}">{{ question.question_text }}</a>
+```
+
+## 抛出 404 错误
+
+处理 `detail` 视图函数，在访问了一个不存在的问卷问题时抛出 404 错误。
+
+为 `detail` 视图函数创建模版，创建 `/polls/templates/polls/detail.html` 并将以下代码放入该模版中：
+
+```html
+{{ question }}
+```
+
+1. 在应用 `./polls/views.py` 中改写 `detail` 视图以抛出 404 错误：
+
+```py
+# 导入访问错误404
+from django.http import Http404
+
+# 创建问卷详情视图，如果在模型中找不到需要显示404错误
+def detail(request, question_id):
+    try:
+        question = Question.objects.get(pk=question_id)
+    except Question.DoesNotExist:
+        raise Http404("未找到此问卷")
+    return render(request, "polls/detail.html", {"question": question})
+```
+
+2. 使用快捷函数 `get_object_or_404()` 可以简写 404 错误：
+
+```py
+from django.shortcuts import render, HttpResponse, get_object_or_404
+# 创建问卷详情视图，如果在模型中找不到需要显示404错误(简写)
+def detail(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    return render(request, "polls/detail.html", {"question": question})
+```
