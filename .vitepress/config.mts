@@ -219,6 +219,10 @@ export default defineConfig({
               link:'/apython/bdjangoa'
             },
             {
+              text:'安装数据库驱动模块',
+              link:'/apython/adjangoc'
+            },
+            {
               text:'第一个 Django 应用程序 - 2',
               link:'/apython/bdjangob'
             },

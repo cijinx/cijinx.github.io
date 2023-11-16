@@ -1,29 +1,5 @@
 # 第一个 Django 应用程序 - 2
 
-## 安装数据库模块
-
-此配置文档是通过 `mysql-client` 连接到 Docker 启动的 MySQL 详情步骤。
-
-首先需要说明整个连接的路径:
-
-开发服务器(虚拟)-->mysql-client 模块(虚拟)-->mysqlclient(本地)-->MySQL 数据库(Docker)
-
-1. 在本地环境中安装 `mysql`,`mysql-client`,`pkg-config`并导出
-
-```sh
-brew install mysql mysql-client pkg-config
-```
-
-```sh
-export PKG_CONFIG_PATH="/user/local/Cellar/mysql-client/8.1.0/lib/pkgconfig"
-```
-
-2. 虚拟环境安装 `mysqlclient`
-
-```
-poetry add mysqlclient
-```
-
 ## Django 配置 MySQL 相关
 
 1. 配置数据库 `./siteserver/settings.py`
