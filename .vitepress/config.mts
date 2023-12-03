@@ -113,8 +113,8 @@ export default defineConfig({
       { text: '首页', link: '/', activeMatch: '' },
       { text: 'VitePress', link: '/avitepress/', activeMatch: '/avitepress/'},
       { text: 'OpenCore', link: '/aopencore/', activeMatch: '/aopencore/'},
+      {text:'Python',link:'/apython/',activeMatch:'/apython/'},
       { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'},
-      {text:'Python',link:'/apython/',activeMatch:'/apython/'}
     ],
 
     sidebar: {
@@ -182,17 +182,6 @@ export default defineConfig({
           text:'定制优化'
         }
       ],
-      '/adocker/':[
-        {
-          text:'Docker',
-          items:[
-            {
-              text:'开始',
-              link:'/adocker/index'
-            }
-          ]
-        }
-      ],
       '/apython/':[
         {
           text:'Python',
@@ -236,11 +225,33 @@ export default defineConfig({
             }
           ]
         }
-      ]
+      ],
+      '/alinux/':[
+        {
+          text:'Linux',
+          items:[
+            {
+              text:'开始',
+              link:'/alinux/index'
+            }
+          ]
+        }
+      ],
+      '/adocker/':[
+        {
+          text:'Docker',
+          items:[
+            {
+              text:'开始',
+              link:'/adocker/index'
+            }
+          ]
+        }
+      ],
     },
     
     socialLinks: [
-      { icon: 'github', link: 'https://martinovo.github.io/' },
+      { icon: 'github', link: 'https://github.com/MartinOvO/martinovo.github.io' },
       {
         icon: {
           svg: `<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -248,7 +259,7 @@ export default defineConfig({
                   <path fill-rule="evenodd" d="M256,0 C397.384896,0 512,114.615104 512,256 C512,397.384896 397.384896,512 256,512 C114.615104,512 0,397.384896 0,256 C0,114.615104 114.615104,0 256,0 Z M385.588158,113.77778 C385.585545,113.77778 385.582931,113.77778 385.580317,113.785616 L208.59207,113.785616 C156.227582,113.785616 113.777778,156.235421 113.777778,208.599908 L113.777778,385.580317 C113.777778,392.562249 119.437752,398.222222 126.419683,398.222222 L312.891227,398.222222 C360.018235,398.222222 398.222222,360.018235 398.222222,312.891227 L398.222222,240.202136 C398.222222,233.220205 392.562249,227.560231 385.580317,227.560231 L240.198402,227.560231 C233.217763,227.563542 227.558325,233.221498 227.553186,240.202136 L227.54491,271.805633 C227.539666,278.787563 233.198157,284.44902 240.180089,284.450848 L328.691742,284.446696 C335.570998,284.446534 341.166937,289.941214 341.330092,296.781235 L341.333647,297.088496 L341.333647,303.409129 C341.333647,324.354924 324.353725,341.334845 303.40793,341.334845 L183.300418,341.334845 C176.319489,341.334497 170.660273,335.675438 170.659732,328.694508 L170.656422,208.59864 C170.654799,187.652845 187.634253,170.672455 208.580047,170.671878 L385.545033,170.672923 C392.523903,170.66508 398.182608,165.009884 398.19478,158.03102 L398.214382,126.42752 C398.226551,119.445594 392.570089,113.782111 385.588158,113.77778 Z"></path> 
                 </svg>`
         },
-        link: 'https://martinmac.gitee.io/'
+        link: 'https://gitee.com/martinmac/martinmac'
       },
       { 
         icon: {
