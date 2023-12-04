@@ -235,6 +235,15 @@ export default defineConfig({
               link:'/alinux/index'
             }
           ]
+        },
+        {
+          text:'Frp',
+          items:[
+            {
+              text:'Frp安装配置',
+              link:'/alinux/afrp'
+            }
+          ]
         }
       ],
       '/adocker/':[
