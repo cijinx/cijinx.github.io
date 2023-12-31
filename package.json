@@ -11,8 +11,8 @@
     "docs:preview": "vitepress preview --port=8080"
   },
   "devDependencies": {
-    "sass": "^1.64.1",
-    "vitepress": "^1.0.0-rc.31",
-    "vue": "^3.3.4"
+    "sass": "^1.69.6",
+    "vitepress": "^1.0.0-rc.34",
+    "vue": "^3.4.3"
   }
 }
