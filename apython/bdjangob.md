@@ -4,25 +4,25 @@
 
 1. 配置数据库 `./siteserver/settings.py`
 
-```py
+```py{3-8}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', // [!code hl]
-        'NAME': 'dbsite', // [!code hl]
-        'USER': 'user', // [!code hl]
-        'PASSWORD': 'password', // [!code hl]
-        'HOST': '127.0.0.1', // [!code hl]
-        'PORT': '3306' // [!code hl]
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dbsite',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
     }
 }
 ```
 
 2. 配置时区 `./siteserver/settings.py`
 
-```py
+```py{3}
 LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'Asia/Shanghai' // [!code hl]
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -79,7 +79,7 @@ python manage.py migrate
 
 5.将应用 `polls` 的模型注册到项目中 `./siteserver/settings.py`
 
-```py
+```py{8}
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -87,7 +87,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls.apps.PollsConfig'  # 子应用模型注册 // [!code hl]
+    'polls.apps.PollsConfig'  # 子应用模型注册
 ]
 ```
 
@@ -123,7 +123,7 @@ Superuser created successfully.
 
 ![后台管理](/public/images/djangoa.png)
 
-## 将应用(polls)添加到管理系统
+## 将应用(polls)的(Question)模型添加到管理系统
 
 虽然已经有了应用(polls)的模型，但是在管理后台依然看不到，需要将模型添加到后台管理中。
 `./polls/admin.py`
@@ -139,3 +139,53 @@ admin.site.register(Question)
 启动服务，访问 `http://127.0.0.1:8000/admin/` 可以在后台看到(Question)选项。
 
 ![后台管理](/public/images/djangob.png)
+
+在后台中可以对(Question)模型相关联的数据做增删改查的操作，Django 会根据创建的(Question)模型写入数据库。
+
+## 自定义(Question)模型后台表单
+
+通过 admin.site.register(Question) 注册 Question 模型，Django 能够构建一个默认的表单用于展示。通常来说，你期望能自定义表单的外观和工作方式。你可以在注册模型时将这些设置告诉 Django。
+
+通过重排列表单上的字段来看看它是怎么工作的。用以下内容替换 admin.site.register(Question)：`/polls/admin.py`
+
+```py
+from django.contrib import admin
+
+from .models import Question
+
+class QuestionAdmin(admin.ModelAdmin):
+    fields = ["pub_date", "question_text"]
+
+admin.site.register(Question, QuestionAdmin)
+```
+
+你需要遵循以下流程——创建一个模型后台类，接着将其作为第二个参数传给 admin.site.register() ——在你需要修改模型的后台管理选项时这么做。
+
+以上修改使得 "Publication date" 字段显示在 "Question" 字段之前：
+
+![Question](/public/images/djangoc.png)
+
+这样自定义表单数据在自由两个字段时并不是很必要，但是如果表单拥有十几个乃至更多字段时显示的数据就会很直观。
+
+如果一个表单拥有十几个字段或者更多，更希望在后台分类展示这些字段：
+`/polls/admin.py`
+
+```py
+from django.contrib import admin
+
+from .models import Question
+
+class QuestionAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None, {"fields": ["question_text"]}),
+        ("日期", {"fields": ["pub_date"]}),
+    ]
+
+admin.site.register(Question, QuestionAdmin)
+```
+
+`fieldsets`元组中的第一个字段是分类的标题。以下是表单在后台管理中的样子：
+
+![Question](/public/images/djangod.png)
+
+## 添加(Choice)模型添加到后台管理中
