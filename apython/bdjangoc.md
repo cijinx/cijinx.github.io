@@ -31,11 +31,11 @@ urlpatterns = [
     path("", views.index, name="index"),
 
     # 问卷详情绑定路由。访问'/polls/<id>'
-    path("<int:question_id>/", views.detail, name="detail"), // [!code hl]
+    path("<int:question_id>/", views.detail, name="detail"), # [!code hl]
     # 问卷选项绑定路由。访问'/polls/results/<id>/'
-    path("results/<int:question_id>/", views.results, name="results"), // [!code hl]
+    path("results/<int:question_id>/", views.results, name="results"), # [!code hl]
     # 投票结果绑定路由。访问'/polls/vote/<id>/'
-    path("vote/<int:question_id>/", views.vote, name="vote"), // [!code hl]
+    path("vote/<int:question_id>/", views.vote, name="vote"), # [!code hl]
 ]
 ```
 
@@ -136,7 +136,7 @@ from django.urls import path, include
 from . import views
 
 # 命名空间
-app_name = "polls" // [!code hl]
+app_name = "polls" # [!code hl]
 
 urlpatterns = [
    ......

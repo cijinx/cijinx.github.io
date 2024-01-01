@@ -136,11 +136,11 @@ def index(request):
 
    ```py
    from django.contrib import admin
-   from django.urls import path, include // [!code focus]
+   from django.urls import path, include # [!code focus]
 
    urlpatterns = [
        path('admin/', admin.site.urls),
-       path('polls', include('polls.urls')) // [!code focus]
+       path('polls', include('polls.urls')) # [!code focus]
    ]
    ```
 
