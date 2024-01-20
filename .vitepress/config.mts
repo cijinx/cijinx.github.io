@@ -94,6 +94,7 @@ interface Footer {
 }
 
 export default defineConfig({
+  lastUpdated: true,
   lang: 'zh-CN',
   title: 'MartinMac',
   description: 'MartinMac Site',
@@ -108,6 +109,38 @@ export default defineConfig({
   themeConfig: {
     siteTitle: 'MartinMac',
     logo: '/logo.svg',
+
+    lastUpdated: {
+      text: '更新于',
+      formatOptions: {
+        dateStyle: 'full',
+      }
+    },
+    
+    search: {
+      provider: 'local',
+      options: {
+        disableDetailedView: false,
+        detailedView: 'auto',
+        disableQueryPersistence: false,
+        translations: {
+          button:{
+            buttonText: '搜索文档',
+            buttonAriaLabel: '搜索文档'
+          },
+          modal: {
+            displayDetails: '显示详情',
+            resetButtonTitle: '清除查询条件',
+            noResultsText: '无法找到相关结果',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭'
+            }
+          }
+        }
+      }
+    },
 
     nav: [
       { text: '首页', link: '/', activeMatch: '' },
@@ -167,6 +200,7 @@ export default defineConfig({
         },
         {
           text:'配置Config',
+          collapsed: true,
           items:[
             { text: "ACPI", link: "/aopencore/aacpi" },
             { text: "Booter", link: "/aopencore/abooter" },
@@ -200,6 +234,7 @@ export default defineConfig({
         },
         {
           text:'Django',
+          collapsed: true,
           items:[
             {
               text:'开始',
@@ -264,7 +299,8 @@ export default defineConfig({
         }
       ],
     },
-    
+    outline: 2,
+    outlineTitle: '页面导航',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/MartinOvO/martinovo.github.io' },
       {

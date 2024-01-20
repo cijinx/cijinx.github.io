@@ -1,5 +1,7 @@
 # 使用 OpenCore 引导安装黑苹果
 
+![award](/public/images/award.png)
+
 ## 简介
 
 > OpenCore (简称 OC)是一个着眼于未来的开源引导工具，最初诞生于 HermitCrabs 实验室，现在接手于 Acidanthera，其目的是创造一个更加严谨的模组化的轻量引导系统。尽管 OpenCore 的主要用途是黑苹果，它也支持其他操作系统的引导。
