@@ -6,8 +6,7 @@ hero:
     name: "MartinMac",
     text: "MartinMac",
     tagline: "691585101@QQ.com",
-    image:
-      { light: "/public/images/award.png", dark: "/public/images/award.png" },
+    image: { light: "/public/logo.svg", dark: "/public/logo.svg" },
     actions:
       [
         {
