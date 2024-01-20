@@ -1,1 +1,0 @@
-import{_ as r,c as a,o as e,U as t}from"./chunks/framework.5zKBJa9O.js";const u=JSON.parse('{"title":"Frp 安装部署","description":"","frontmatter":{},"headers":[],"relativePath":"alinux/afrp.md","filePath":"alinux/afrp.md"}'),p={name:"alinux/afrp.md"},o=t("",6),i=[o];function l(n,f,h,s,c,_){return e(),a("div",null,i)}const m=r(p,[["render",l]]);export{u as __pageData,m as default};

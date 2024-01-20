@@ -179,6 +179,12 @@ export default defineConfig({
           ]
         },
         {
+          text:'安装指南',
+          items:[
+            {text:'Comet Lake(10代台式主机)',link:"/aopencore/bcometlake"}
+          ]
+        },
+        {
           text:'定制优化'
         }
       ],
