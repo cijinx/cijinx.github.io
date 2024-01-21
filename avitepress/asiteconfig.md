@@ -25,7 +25,7 @@ export default defineConfig({
 
 网站的标题是每个浏览器标签页显示的内容。
 显示效果如下:
-![网站标题](/public/images/title.png)
+![网站标题](/images/title.png)
 
 ### 配置网站标题图标
 

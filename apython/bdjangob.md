@@ -121,7 +121,7 @@ Superuser created successfully.
 
 5. 启动服务，访问 `http://127.0.0.1:8000/admin/` 输入上一步创建的账号密码将成功访问后台。
 
-![后台管理](/public/images/djangoa.png)
+![后台管理](/images/djangoa.png)
 
 ## 将应用(polls)的(Question)模型添加到管理系统
 
@@ -138,7 +138,7 @@ admin.site.register(Question)
 
 启动服务，访问 `http://127.0.0.1:8000/admin/` 可以在后台看到(Question)选项。
 
-![后台管理](/public/images/djangob.png)
+![后台管理](/images/djangob.png)
 
 在后台中可以对(Question)模型相关联的数据做增删改查的操作，Django 会根据创建的(Question)模型写入数据库。
 
@@ -163,7 +163,7 @@ admin.site.register(Question, QuestionAdmin)
 
 以上修改使得 "Publication date" 字段显示在 "Question" 字段之前：
 
-![Question](/public/images/djangoc.png)
+![Question](/images/djangoc.png)
 
 这样自定义表单数据在自由两个字段时并不是很必要，但是如果表单拥有十几个乃至更多字段时显示的数据就会很直观。
 
@@ -186,6 +186,6 @@ admin.site.register(Question, QuestionAdmin)
 
 `fieldsets`元组中的第一个字段是分类的标题。以下是表单在后台管理中的样子：
 
-![Question](/public/images/djangod.png)
+![Question](/images/djangod.png)
 
 ## 添加(Choice)模型添加到后台管理中

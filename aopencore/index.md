@@ -1,6 +1,6 @@
 # 使用 OpenCore 引导安装黑苹果
 
-![award](/public/images/award.png)
+![award](/images/award.png)
 
 ## 简介
 
