@@ -146,7 +146,8 @@ export default defineConfig({
       { text: '首页', link: '/', activeMatch: '' },
       { text: 'VitePress', link: '/avitepress/', activeMatch: '/avitepress/'},
       { text: 'OpenCore', link: '/aopencore/', activeMatch: '/aopencore/'},
-      {text:'Python',link:'/apython/',activeMatch:'/apython/'},
+      { text: 'Linux', link: '/alinux/', activeMatch: '/alinux/'},
+      { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
       { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'},
     ],
 
@@ -278,10 +279,19 @@ export default defineConfig({
           ]
         },
         {
+          text:'Nginx',
+          items:[
+            {
+              text:'nginx文档',
+              link:'/alinux/anginx'
+            }
+          ]
+        },
+        {
           text:'Frp',
           items:[
             {
-              text:'Frp安装配置',
+              text:'Frp文档',
               link:'/alinux/afrp'
             }
           ]
