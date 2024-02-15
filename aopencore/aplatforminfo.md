@@ -6,9 +6,15 @@
 
 True
 
+基于 `Generic` 属性而不是 `DataHub`、`NVRAM` 和 `SMBIOS` 属性生成机型信息。
+
+默人的 OC 配置项中使用的是`Generic`，不需要考虑其他的配置机型的方式。只需要开启此项，并在下面的`Generic`配置项中正确填写相关配置即可。
+
 ## CustomMemory
 
 False
+
+使用 OC 自定义内存开启此项则会完全取代 SMBIOS 中任何现有的内存配置。只有当 `UpdateSMBIOS` 设置为 `True` 时才生效。
 
 ## Generic
 
@@ -16,9 +22,9 @@ False
 
   - 用支持的 bit 更新 `FirmwareFeatures`，升级 macOS 时可能需要该选项。
 
-- MLB: <span style="color:#FF3030">false</span>
+- MLB: <span style="color:#FF3030">M0000000000000001</span>
 
-  - 000
+  - 生成三码填写
 
 - MaxBIOSVersion: <span style="color:#FF3030">0</span>
 
@@ -26,11 +32,11 @@ False
 
 - ProcessorType: <span style="color:#FF3030">0</span>
 
-  - 000
+  - 一些因特尔 ES、QS 或其他不能正确显示 CPU 的处理器及 AMD 的 CPU 配置正确的 CPU 及核心数。
 
-- ROM: <span style="color:#FF3030">false</span>
+- ROM: <span style="color:#FF3030">空</span>
 
-  - 000
+  - 此处留空
 
 - SpoofVendor: <span style="color:#FF3030">True</span>
 
@@ -40,34 +46,44 @@ False
 
   - 用来表示内存是否可以更换和升级，此值也控制着「关于本机」中「内存」选项卡的可见性。
 
-- SystemProductName: <span style="color:#FF3030">false</span>
+- SystemProductName: <span style="color:#FF3030">iMac19,1</span>
 
-  - 000
+  - 配置机型
 
-- SystemSerialNumber: <span style="color:#FF3030">false</span>
+- SystemSerialNumber: <span style="color:#FF3030">W00000000001</span>
 
-  - 000
+  - 生成三码填写
 
-- SystemUUID: <span style="color:#FF3030">DDF44B32-F002-B6FA-6507-F02F741AAFD6</span>
+- SystemUUID: <span style="color:#FF3030">00000000-0000-0000-0000-000000000000</span>
 
-  - 000
+  - 生成三码填写
 
 ## UpdateDataHub
 
 True
 
+更新 `Data Hub` 字段。根据 `Automatic` 的值，这些字段会从 `Generic` 或 `DataHub` 中读取。
+
 ## UpdateNVRAM
 
 True
+
+是否更新 NVRAM 中关于机型信息的相关字段。
 
 ## UpdateSMBIOS
 
 True
 
+更新 `SMBIOS` 字段。根据 `Automatic` 的值，这些字段会从 `Generic` 或 `SMBIOS` 中读取。
+
 ## UpdateSMBIOSMode
 
 Create
 
+更新 SMBIOS 字段的方式。
+
 ## UseRawUuidEncoding
 
 False
+
+对 `SMBIOS` 的 `UUID` 使用原始编码。

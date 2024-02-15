@@ -97,55 +97,59 @@ APFS 分区驱动的相关配置项。
 
 ## Audio
 
-在开机阶段板载音频的驱动配置，此项对于 DP 等数字音频无效。
+<span style="color:#FF3030">初始配置略过</span>
+
+在开机 UEFI 阶段板载音频的驱动配置，此项对于 DP 等数字音频无效。与操作系统音频支持所需的任何配置（例如 AppleALC ）无关。
 
 - AudioCodec: <span style="color:#FF3030">0</span>
 
-  - 音频声卡 `in` 节点。
+  - 特定音频控制器上的编解码器地址，用于音频支持。
 
 - AudioDevice: <span style="color:#FF3030">0</span>
 
-  - 声卡路径。
+  - 特定音频控制器的设备路径，用于音频支持。
 
-- AudioOutMask: <span style="color:#FF3030">false</span>
+- AudioOutMask: <span style="color:#FF3030">1</span>
 
-  - 音频声卡 `out` 节点。
+  - 位字段，指示用于 UEFI 声音的输出通道。
 
 - AudioSupport: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 通过连接到固件音频驱动程序以激活音频支持。
 
-- DisconnectHda: <span style="color:#FF3030">false</span>
+- DisconnectHda: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 在加载驱动程序之前，断开 HDA 控制器的连接
 
-- MaximumGain: <span style="color:#FF3030">false</span>
+- MaximumGain: <span style="color:#FF3030">默认值</span>
 
-  - 000
+  - 用于 UEFI 音频的最大增益，以分贝（dB）为单位。
 
-- MinimumAssistGain: <span style="color:#FF3030">false</span>
+- MinimumAssistGain: <span style="color:#FF3030">默认值</span>
 
-  - 000
+  - 用于选择器音频辅助的最小增益（dB）。
 
-- MinimumAudibleGain: <span style="color:#FF3030">false</span>
+- MinimumAudibleGain: <span style="color:#FF3030">默认值</span>
 
-  - 000
+  - 尝试播放任何声音的最小增益，单位是分贝（dB）。
 
 - PlayChime: <span style="color:#FF3030">Auto</span>
 
-  - 000
+  - 开机时播放 Mac 特有的风铃的声音。
 
 - ResetTrafficClass: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 将 HDA Traffic Class Select 寄存器设置为 `TC0`。
 
 - SetupDelay: <span style="color:#FF3030">0</span>
 
-  - 000
+  - 音频编解码器重新配置的延迟，以毫秒为单位。
 
 ## ConnectDrivers
 
 True
+
+驱动程序加载后执行 UEFI 控制器连接操作。
 
 ## Drivers
 
@@ -157,35 +161,35 @@ True
 
 - KeyFiltering: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 启用键盘输入的合理性检查。
 
-- KeyForgetThreshold: <span style="color:#FF3030">False</span>
+- KeyForgetThreshold: <span style="color:#FF3030">默认值</span>
 
-  - 000
+  - 两次按键之间的间隔时间。
 
 - KeySupport: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 启用内部键盘输入转换为 AppleKeyMapAggregator 协议。
 
-- KeySupportMode: <span style="color:#FF3030">False</span>
+- KeySupportMode: <span style="color:#FF3030">Auto</span>
 
-  - 000
+  - 将内部键盘的输入转换设置为 AppleKeyMapAggregator 协议模式。
 
 - KeySwap: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 启用后将交换 `Command` 和 `Option`。
 
 - PointerSupport: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 启用内部指针驱动器。
 
-- PointerSupportMode: <span style="color:#FF3030">False</span>
+- PointerSupportMode: <span style="color:#FF3030">默认值</span>
 
-  - 000
+  - 设置用于内部指针驱动程序的 OEM 协议。
 
-- TimerResolution: <span style="color:#FF3030">False</span>
+- TimerResolution: <span style="color:#FF3030">0</span>
 
-  - 000
+  - 固件始终刷新的频率。设置为`0`不改变固件的刷新频率。
 
 ## Output
 
@@ -193,206 +197,218 @@ True
 
 - ClearScreenOnModeSwitch: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 消除开机时从图形模式转换到文本时出现残影的问题。
 
-- ConsoleMode: <span style="color:#FF3030">Max</span>
+- ConsoleFont: <span style="color:#FF3030">留空</span>
 
-  - 000
+  - 指定用于 OpenCore 内置文本渲染器的控制台字体。
+
+- ConsoleMode: <span style="color:#FF3030">留空</span>
+
+  - 控制台的输出字符串分辨率。
 
 - DirectGopRendering: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 为控制台使用内置的图形输出协议渲染器。
 
 - ForceResolution: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 老旧的 CPU 核显需要开启此项来自定义分辨率。
 
-- GopBurstMode: <span style="color:#FF3030">Disabled</span>
+- GopBurstMode: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 如果系统固件尚未启用 `write-combining (WC) caching for GOP memory`，则启用 `write-combining (WC) caching for GOP memory`。
 
 - GopPassThrough: <span style="color:#FF3030">Disabled</span>
 
-  - 000
+  - 在 UGA 环境中调用显卡 GOP。若要开启它，你必须同时开启`ProvideConsoleGop`。
 
 - IgnoreTextInGraphics: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 修复在不使用 `-v` 跑马模式时候，开机日志导致的苹果 LOGO 显示不正确的问题。
 
-- InitialMode: <span style="color:#FF3030">False</span>
+- InitialMode: <span style="color:#FF3030">Auto</span>
 
-  - 000
+  - OC 的渲染模式。
 
 - ProvideConsoleGop: <span style="color:#FF3030">True</span>
 
-  - 000
+  - 调用显卡 GOP。
 
 - ReconnectGraphicsOnConnect: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 在驱动连接过程中重新连接所有的图形驱动。
 
 - ReconnectOnResChange: <span style="color:#FF3030">False</span>
 
-  - 000 一些固件在 GOP 分辨率改变后会重新连接显示器才能输出，一般情况下选择 NO。
+  - 一些固件在 GOP 分辨率改变后会重新连接显示器才能输出，一般情况下选择 NO。
 
 - ReplaceTabWithSpace: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 一些固件在 UEFI Shell 下 Tab 功能键不生效，开启这个会用空格键代替。
 
 - Resolution: <span style="color:#FF3030">留空</span>
 
-  - 000
+  - 设置控制台的屏幕分辨率。
 
 - SanitiseClearScreen: <span style="color:#FF3030">True</span>
 
-  - 000 修复 4K 及以上显示器的输出问题。
+  - 修复 4K 及以上显示器的输出问题。
 
 - TextRenderer: <span style="color:#FF3030">BuiltinGraphics</span>
 
-  - 000
+  - 选择通过标准控制台输出的渲染器。
 
-- UIScale: <span style="color:#FF3030">2</span>
+- UIScale: <span style="color:#FF3030">0</span>
 
-  - 000
+  - 用户界面的缩放系数。设置`0`根据分辨率自动缩放
 
 - UgaPassThrough: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 在 GOP 协议实例的基础上提供 UGA 协议实例。
 
 ## ProtocolOverrides
 
 - AppleAudio: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 Apple 音频协议。
 
 - AppleBootPolicy: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 `Apple Boot Policy` 协议，可用于确保 VM 或旧版 Mac 设备上的 APFS 兼容性。
 
 - AppleDebugLog: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 Apple 调试日志输出协议。
 
 - AppleEg2Info: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 `Apple EFI Graphics 2` 协议。
 
 - AppleFramebufferInfo: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 重新安装内置的 `Apple Framebuffer Info` 协议。
 
 - AppleImageConversion: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 `Apple Image Conservation` 协议。
 
 - AppleImg4Verification: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 `Apple IMG4` 验证协议。
 
 - AppleKeyMap: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 `Apple Key Map` 协议。
 
 - AppleRtcRam: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 `Apple RTC RAM` 协议。
 
 - AppleSecureBoot: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 Apple 安全启动协议
 
 - AppleSmcIo: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 SMC I/O 协议。
 
 - AppleUserInterfaceTheme: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 `Apple User Interface Theme` 协议。
 
 - DataHub: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 Data Hub 协议。如果已经安装了协议，这将删除所有先前的属性。
 
 - DeviceProperties: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置的版本替换 Device Property 协议。 这一选项可用于确保在 VM 或旧版 Mac 设备上的兼容性。
 
 - FirmwareVolume: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 强制包装固件卷协议或安装新版本以支持 FileVault 2 的自定义光标图像。
 
 - HashServices: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置版本替换 Hash Services 协议。
 
 - OSInfo: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置版本替换 OS Info 协议。
+
+- PciIo: <span style="color:#FF3030">False</span>
+
+  - 用 64 位 MMIO 兼容的函数替换 Cpulo 和 PciRootBridgelo 中的函数，以修复使用 4G 解码时的无效参数。
 
 - UnicodeCollation: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 用内置版本替换 Unicode Collation 服务。建议启用这一选项以确保 UEFI Shell 的兼容性。
 
 ## Quirks
 
 - ActivateHpetSupport: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 激活 HPET 支持。
 
 - DisableSecurityPolicy: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 禁用平台安全策略。
 
 - EnableVectorAcceleration: <span style="color:#FF3030">True</span>
 
-  - 000
+  - 启用 SHA-512 和 SHA-384 哈希算法的 AVX 矢量加速。这个选项可能会在某些笔记本电脑的固件上引起问题，包括联想。
 
 - EnableVmx: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 启用英特尔虚拟机扩展。
 
 - ExitBootServicesDelay: <span style="color:#FF3030">0</span>
 
-  - 000
+  - 在 `EXIT_BOOT_SERVICES` 事件后添加延迟，单位为毫秒。
 
 - ForceOcWriteFlash: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 启用所有 OpenCore 管理的 NVRAM 系统变量向闪存的写入。
 
 - ForgeUefiSupport: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 在 `EFI 1.x` 固件上提供部分 `UEFI 2.x` 支持。
 
 - IgnoreInvalidFlexRatio: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 某些类型的固件（例如：APTIO IV）可能在 `MSR_FLEX_RATIO（0x194）MSR` 寄存器中包含无效的值。这些值可能导致英特尔平台上的 macOS 启动失败。
 
 - ReleaseUsbOwnership: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 尝试从固件驱动程序中释放 USB 控制器所有权。尽管大多数固件都设法正确执行了该操作或者提供有一个选项，但某些固件没有，从而导致操作系统可能会在启动时卡住。除非需要，否则不建议启用这一选项。
 
 - ReloadOptionRoms: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 查询 PCI 设备并重新加载其可选 ROM（如果可用）。
 
 - RequestBootVarRouting: <span style="color:#FF3030">True</span>
 
-  - 000888
+  - 增加 `启动磁盘` 的可靠性。
 
 - ResizeGpuBars: <span style="color:#FF3030">-1</span>
 
-  - 000
+  - 配置 GPU PCI BAR 的大小。
 
 - ResizeUsePciRbIo: <span style="color:#FF3030">0</span>
 
-  - 000
+  - 使用 `PciRootBridgeIo` 来调整 `GpuBars` 和 `ResizeAppleGpuBar`。
 
 - TscSyncTimeout: <span style="color:#FF3030">0</span>
 
-  - 000
+  - 尝试用指定的 Timeout 执行 TSC 同步。
 
 - UnblockFsConnect: <span style="color:#FF3030">False</span>
 
-  - 000
+  - 某些固件通过「按驱动程序」模式下来阻止引导项加载，导致文件系统协议无法安装。
 
 ## ReservedMemory
+
+<span style="color:#FF3030">初始配置略过</span>
+
+保留内存区域的起始地址，该区域应被分配为保留区，有效地将此类型的内存标记标记为操作系统不可访问。

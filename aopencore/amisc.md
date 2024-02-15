@@ -54,11 +54,13 @@
 
 - PickerAttributes: <span style="color:#FF3030">17</span>
 
-  - 使用 OC 主题时的配置项,初始配置略过。
+  - 使用 OC 主题时的配置项。
+  - <span style="color:#FF3030">初始配置略过</span>
 
 - PickerAudioAssist: <span style="color:#FF3030">False</span>
 
-  - 主题开机音相关,初始配置略过。
+  - 主题开机音相关。
+  - <span style="color:#FF3030">初始配置略过</span>
 
 - PickerMode: <span style="color:#FF3030">Builtin</span>
 
@@ -187,3 +189,5 @@ Debug 模式。
   - 覆盖串行端口属性。如果此选项设置为 False，则不会覆盖来自自定义的任何串行端口属性。
 
 ## Tools
+
+将工具选项添加到 OC 开机引导菜单中。

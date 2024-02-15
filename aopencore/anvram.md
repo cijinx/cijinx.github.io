@@ -20,18 +20,20 @@ NVRAM 注入（如引导标识符和 SIP）
 
 ## Delete
 
-根据官方的说法在上一个配置项中(2.6.1-Add)添加的选项只有在本身不存在且未被屏蔽的情况下才会被设置,如果想要覆盖一个现有的变量值,需要先在此处(2.6.2-Delete)将现有的值删除才能添加,初始配置略过。
+<span style="color:#FF3030">初始配置略过</span>
 
-## LegacyEnable
-
-False
+根据官方的说法在上一个配置项中(2.6.1-Add)添加的选项只有在本身不存在且未被屏蔽的情况下才会被设置,如果想要覆盖一个现有的变量值,需要先在此处(2.6.2-Delete)将现有的值删除才能添加。
 
 ## LegacyOverwrite
 
 False
+
+允许用 `nvram.plist` 文件中的变量覆盖现有 NVRAM 中的变量。
 
 ## LegacySchema
 
 ## WriteFlash
 
 False
+
+允许将所有添加的变量写入闪存。
