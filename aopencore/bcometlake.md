@@ -36,13 +36,13 @@
 
 ### Delete、Patch、Quirks
 
-忽略。
+<span style="color:#FF3030">初始配置略过</span>
 
 ## Booter
 
 ### MmioWhitelist、Patch
 
-忽略。
+<span style="color:#FF3030">初始配置略过</span>
 
 ### Quirks
 
@@ -71,7 +71,7 @@
 
 ### Delete
 
-忽略。
+<span style="color:#FF3030">初始配置略过</span>
 
 ## Kernel
 
@@ -100,7 +100,7 @@
 
 ### Block、Emulate、Force、Patch、Scheme
 
-忽略。
+<span style="color:#FF3030">初始配置略过</span>
 
 ## Misc
 
@@ -122,7 +122,7 @@
 
 ### BlessOverride、Debug、Entries、Serial、Tools
 
-忽略。
+<span style="color:#FF3030">初始配置略过</span>
 
 ## NVRAM
 
@@ -158,7 +158,7 @@
 
 ### Delete、LegacyOverwrite、LegacySchema
 
-忽略。
+<span style="color:#FF3030">初始配置略过</span>
 
 ### WriteFlash
 
@@ -182,7 +182,7 @@ ROM:<> // 留空
 
 ### Automatic、CustomMemory、UpdateDataHub、UpdateNVRAM、UpdateSMBIOS、UpdateSMBIOSMode、UseRawUuidEncoding
 
-忽略。
+<span style="color:#FF3030">初始配置略过</span>
 
 ## UEFI
 
@@ -197,4 +197,4 @@ ROM:<> // 留空
 
 ### APFS、AppleInput、Audio、Input、Output、ProtocolOverrides、Quirks、ReservedMemory
 
-忽略。
+<span style="color:#FF3030">初始配置略过</span>
