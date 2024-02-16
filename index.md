@@ -21,72 +21,49 @@ hero:
 features:
   [
     {
-      icon:
-        {
-          light: "/icon/vitepress.svg",
-          dark: "/icon/vitepress.svg",
-          height: "48",
-        },
+      icon: { src: "/icons/vp.svg", width: "48", height: "48" },
       title: "VitePress",
       link: "./avitepress/",
       linkText: "查看文档",
     },
     {
-      icon:
-        {
-          light: "/icon/opencore.svg",
-          dark: "/icon/opencore.svg",
-          height: "48",
-        },
+      icon: { src: "/icons/oc.svg", width: "48", height: "48" },
       title: "OpenCore",
       link: "./aopencore/",
       linkText: "查看文档",
     },
     {
-      icon:
-        {
-          light: "/icon/proxmoxve.svg",
-          dark: "/icon/proxmoxve.svg",
-          height: "48",
-        },
+      icon: { src: "/icons/pve.svg", width: "48", height: "48" },
       title: "ProxmoxVE",
       link: "./alinux/",
       linkText: "查看文档",
     },
     {
-      icon:
-        { light: "/icon/truenas.svg", dark: "/icon/truenas.svg", height: "48" },
+      icon: { src: "/icons/tnas.svg", width: "48", height: "48" },
       title: "TrueNAS",
       link: "./alinux/",
       linkText: "查看文档",
     },
     {
-      icon:
-        { light: "/icon/docker.svg", dark: "/icon/docker.svg", height: "48" },
+      icon: { src: "/icons/dk.svg", width: "48", height: "48" },
       title: "Docker",
       link: "./adocker/",
       linkText: "查看文档",
     },
     {
-      icon: { light: "/icon/mysql.svg", dark: "/icon/mysql.svg", height: "48" },
+      icon: { src: "/icons/sql.svg", width: "48", height: "48" },
       title: "MySQL",
       link: "./adocker/",
       linkText: "查看文档",
     },
     {
-      icon:
-        { light: "/icon/onedev.svg", dark: "/icon/onedev.svg", height: "48" },
+      icon: { src: "/icons/dev.svg", width: "48", height: "48" },
       title: "OneDev",
       link: "./adocker/",
       linkText: "查看文档",
     },
     {
-      icon:
-        {
-          light: "/icon/jellyfin.svg",
-          dark: "/icon/jellyfin.svg",
-          height: "48",
-        },
+      icon: { src: "/icons/fin.svg", width: "48", height: "48" },
       title: "Jellyfin",
       link: "./adocker/",
       linkText: "查看文档",

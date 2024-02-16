@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>nav</title>
+    <g id="nav" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="navidrome" transform="translate(36, 36)" stroke="#000000" stroke-width="20">
+            <circle id="round-1" fill="#0084FF" fill-rule="nonzero" cx="220" cy="220" r="220"></circle>
+            <circle id="round-2" fill="#FFFFFF" fill-rule="nonzero" cx="220" cy="220" r="80"></circle>
+            <circle id="round-3" fill="#FFFFFF" fill-rule="nonzero" cx="220" cy="220" r="20"></circle>
+            <path d="M220.390655,46 C139.784117,46 71.9793543,100.810919 52.2136,175.195523" id="Stroke-1" stroke-linecap="round"></path>
+            <path d="M388.3906,265.000077 C307.784062,265.000077 239.979299,319.810996 220.213545,394.1956" id="Stroke-2" stroke-linecap="round" transform="translate(304.3021, 329.5978) rotate(180) translate(-304.3021, -329.5978)"></path>
+            <path d="M46.6093446,211.19958 C46.4641283,214.11474 46.3906554,217.04879 46.3906554,220" id="Stroke-3" stroke-linecap="round"></path>
+            <path d="M394.609345,220.1996 C394.464128,223.11476 394.390655,226.04881 394.390655,229.00002" id="Stroke-4" stroke-linecap="round" transform="translate(394.5, 224.5998) rotate(180) translate(-394.5, -224.5998)"></path>
+            <path d="M220,89 C147.650698,89 89,147.650698 89,220" id="Stroke-5" stroke-linecap="round"></path>
+            <path d="M351,220 C278.650698,220 220,278.650698 220,351" id="Stroke-6" stroke-linecap="round" transform="translate(285.5, 285.5) rotate(180) translate(-285.5, -285.5)"></path>
+        </g>
+    </g>
+</svg>
