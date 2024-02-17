@@ -93,6 +93,10 @@ export default defineConfig({
 
     outline: 2,
     outlineTitle: '页面导航',
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    },
 
     sidebar: {
       '/avitepress/':[

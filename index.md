@@ -5,7 +5,7 @@ hero:
   {
     name: "MartinMac",
     text: "MartinMac",
-    tagline: "691585101@QQ.com",
+    tagline: "QQ: 691585101",
     image: "/images/award.png",
     actions:
       [
