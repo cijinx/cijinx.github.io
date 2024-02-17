@@ -220,7 +220,11 @@ export default defineConfig({
           ]
         },
         {
-          text:'定制优化'
+          text:'定制优化',
+          items:[
+            {text:'其他优化项',link:"/aopencore/xother"},
+            {text:'删除 config 多余配置项',link:"/aopencore/xdel"}
+          ]
         }
       ],
       '/apython/':[
