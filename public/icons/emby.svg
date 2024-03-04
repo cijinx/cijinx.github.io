@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>emby</title>
+    <g id="emby" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(26, 26)">
+            <polygon id="Stroke-1" fill="#52B54B" points="460 211.84416 335.730945 87.575105 317.57305 105.730945 211.84416 0 87.5730498 124.271111 105.728889 142.42695 0 248.157895 124.269055 372.42695 142.42695 354.271111 248.15584 460 372.42695 335.730945 354.269055 317.575105"></polygon>
+            <polygon id="Stroke-2" fill="#FFFFFF" points="328.83896 230.000617 180.486802 144.3492 180.486802 315.652033"></polygon>
+        </g>
+    </g>
+</svg>
