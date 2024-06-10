@@ -55,7 +55,7 @@
 
 - 配置 VitePress
 
-  1.  引入 Nodejs
+  1.  初始化项目
 
   ::: code-group
 
@@ -67,21 +67,29 @@
   yarn init
   ```
 
-  :::
-
-  2. 下载 vitepress
-
-  ::: code-group
-
-  ```sh[npm]
-  npm install -D vitepress
-  ```
-
-  ```sh[yarn]
-  yarn add -D vitepress
+  ```sh[bun]
+  bun init
   ```
 
   :::
+
+2. 下载 vitepress
+
+::: code-group
+
+```sh[npm]
+npm install -D vitepress
+```
+
+```sh[yarn]
+yarn add -D vitepress
+```
+
+```sh[bun]
+bun add -D vitepress
+```
+
+:::
 
 ### 安装向导
 
@@ -91,6 +99,14 @@ VitePress 附带一个命令行设置向导,可以搭建项目的基本框架。
 
 ```sh[npm]
 npx vitepress init
+```
+
+```sh[yarn]
+yarn vitepress init
+```
+
+```sh[bun]
+bun vitepress init
 ```
 
 :::
@@ -181,6 +197,27 @@ npm run docs:dev
 
 ```sh [yarn]
 yarn docs:dev
+```
+
+```sh [bun]
+bun run docs:dev
+```
+
+:::
+
+除了 npm 脚本，还可以直接调用 VitePress：
+::: code-group
+
+```sh [npm]
+npx vitepress dev docs
+```
+
+```sh [yarn]
+yarn vitepress dev docs
+```
+
+```sh [bun]
+bun vitepress dev docs
 ```
 
 :::
