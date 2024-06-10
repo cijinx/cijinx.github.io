@@ -13,7 +13,7 @@
   "devDependencies": {
     "@types/bun": "latest",
     "sass": "^1.72.0",
-    "vitepress": "^1.2.2",
+    "vitepress": "^1.2.3",
     "vue": "^3.4.21"
   },
   "peerDependencies": {
