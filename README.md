@@ -1,4 +1,4 @@
-# martinmac
+# MartinMac
 
 To install dependencies:
 
