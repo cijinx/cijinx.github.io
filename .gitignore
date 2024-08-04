@@ -1,7 +1,7 @@
 .idea
-package-lock.json
-bun.lockb
-yarn.lock
+/package-lock.json
+/bun.lockb
+/yarn.lock
 node_modules
 
 cache
