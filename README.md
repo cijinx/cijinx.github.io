@@ -1,15 +1,13 @@
-# MartinMac
+# VitePress生成的MartinMac静态页面网站
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
+安装依赖项:
 
 ```bash
-bun run index.js
+bun install -y
 ```
 
-This project was created using `bun init` in bun v1.0.26. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+运行项目:
+
+```bash
+bun run docs:dev
+```
