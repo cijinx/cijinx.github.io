@@ -259,6 +259,20 @@ export default defineConfig({
           ]
         }
       ],
+      '/abunjs/':[
+        {
+          text:'安装',
+          link:'/abunjs/index'
+        },
+        {
+          text:'运行时',
+          link:'/abunjs/runtime'
+        },
+        {
+          text:'包管理',
+          link:'/abunjs/manager'
+        }
+      ],
     }
   }
 })
