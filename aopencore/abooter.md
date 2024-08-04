@@ -2,11 +2,41 @@
 
 > 本文档会把 config 的项目分开来，内容繁琐，请仔细阅读相关配置项。配置 `config.plist` 强制要求在 Windows 环境下使用 <span style="color:#FF3030">Propertree</span> 来编辑，其他任何软件都不建议使用。
 
-内存相关选项配置。
+本部分允许在 Apple BootLoader （`boot.efi`）上应用不同种类的 UEFI 修改。目前，这些修改为不同的固件提供了各种补丁和环境更改。
+
+对于 Booter 的配置顺序建议按照如下的顺序执行：
+1. `Quirks`
+2. `Patch`
+
+如果是在第一次安装黑苹果的硬件上使用此功能请检查主板的BIOS设置，以下BIOS选项建议检查：
+
+- 更新BIOS的最新固件（如果主板支持BIOS固件更新，具体方法请浏览各大主板的官网）
+- 禁用**快速启动**相关配置`Fast Boot`和`Hardware Fast Boot`
+- 启用**大于 4G 地址空间解码** `Above 4G decoding`
+- 禁用`VT-d`
+- 禁用`CFG Lock`
+- 禁用**兼容性支持模块**`CSM`
+- 启用`EHCI/XHCI Hand-off`功能。仅在系统启动过程中**出现USB相关报错**建议启用。
+- 建议在BIOS中启用 `VT-x`、`Hyper Threading`、`Execute Disable Bit`。
+- 可能在BIOS中禁用 `Thunderbolt Support`、`Intel SGX`、`Intel Platform Trust`。此配置不是必须的。
+
+:::info 注
+以上BIOS配置项在不同主板上都会略用不同，有些主板可能找不到相关选项，忽略即可。
+:::
 
 ## MmioWhitelist
 
-<span style="color:#FF3030">初始配置略过</span>
+1. `Address`
+
+    内存地址
+
+2. `Comment`
+
+    注释
+
+3. `Enabled`
+
+    设置为 `true` 则应用此条补丁。
 
 以下是默认项的说明:
 
@@ -14,8 +44,6 @@
 - 第二项是解决开机在 <span style="color:#FF3030">PCI Configuration</span> 这里卡住。ACPI、PCI device 同时释放到内存时发生 <span style="color:#FF3030">0x1000</span> 内存地址被占用导致在 <span style="color:#FF3030">PCI Configuration</span> 卡住。
 
 ## Patch
-
-<span style="color:#FF3030">初始配置略过</span>
 
 该功能可以对 Bootx64.efi 进行修改。
 
