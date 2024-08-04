@@ -60,8 +60,8 @@ export default defineConfig({
           { text: 'Frp', link: '/alinux/afrp' }
         ]
       },
-      { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
       { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'},
+      { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
     ],
 
     socialLinks: [
