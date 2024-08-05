@@ -1,5 +1,32 @@
 # Bun 包管理
 
+## BunJS换源
+
+**全局换源**
+
+1. 在 macOS/linux 这种类UNIX系统中全局的配置文件位于 `$HOME/.bunfig.toml` 下。好多人对 `$HOME` 目录感到疑惑，实际上它所处的位置就是当前用户的根目录。默认情况下新打开的终端就处于此目录下。如果对所在目录感到疑惑可以使用以下命令跳转 `$HOME` 目录：
+   ```
+   cd ~
+   cd $HOME
+   ```
+2. 默认情况下此目录下不存在 `.bunfig.toml` 文件，创建：
+   ```
+   touch .bunfig.toml
+   ```
+3. 编辑其中内容：
+   ```
+   [install]
+   registry = "https://registry.npmmirror.com/"
+   ```
+   
+**当前项目换源**
+
+在当前项目下创建 `bunfig.toml` （注意！没有前面的点），并编辑其中的内容。
+
+:::info 注
+Bun 执行命令行时如果检测到局部和全局的 bunfig 文件，则结果时浅合并的。此时局部覆盖全局配置。
+:::
+
 ## 安装所有依赖项
 
 `bun install`
@@ -81,7 +108,7 @@ bun add vue --exact
 {
   "dependencies": {
     // 不使用 --exact
-    "vue": "^3.4.0", // 这匹配 >= 3.2.0 < 4.0.0
+    "vue": "^3.4.0", // 这匹配 >= 3.4.0 < 4.0.0
 
     // 使用 --exact
     "vue": "3.4.0" // 这只匹配 3.4.0
@@ -105,4 +132,37 @@ bun add -g vue
 
 ```shell
 bun remove vue
+```
+
+## 查看依赖项
+
+查看当前项目的依赖项及版本号：
+
+```shell
+bun pm ls
+```
+结果：
+```
+/path/to/project node_modules (666)
+├── @types/bun@1.1.6
+├── sass@1.77.8
+├── typescript@5.4.5
+├── vitepress@1.3.1
+└── vue@3.4.35
+```
+
+查看当前项目的所有依赖项及版本号：
+
+```shell
+bun pm ls --all
+```
+结果：
+```
+/path/to/project node_modules (666)
+├── @types/bun@1.1.6
+├── sass@1.77.8
+├── typescript@5.4.5
+├── vitepress@1.3.1
+├── vue@3.4.35
+├── ...
 ```
