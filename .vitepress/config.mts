@@ -62,6 +62,12 @@ export default defineConfig({
       },
       { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'},
       { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
+      {
+        text: 'Web', activeMatch: ['/abunjs/',],
+        items: [
+          { text: 'BunJS', link: '/abunjs/index'}
+        ]
+      }
     ],
 
     socialLinks: [
