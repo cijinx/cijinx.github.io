@@ -2,9 +2,30 @@
 
 ## Docker 安装
 
-1. 普通环境安装
-   [参考链接](https://docs.docker.com/get-started/get-docker/)
-2. NAS 环境安装
+#### 普通环境安装
+
+[参考链接](https://docs.docker.com/get-started/get-docker/)
+
+通过官网的文档可以很简单的在 Windows、macOS、Linux 系统中安装 Docker 图形化界面或者单独安装 Docker 引擎。
+
+#### NAS 环境安装
+
+NAS 环境更推荐的安装方式是 CasaOS[参考链接](https://github.com/IceWhaleTech/CasaOS)，
+[官方网站](https://casaos.zimaspace.com/)
+
+![award](/images/casaos.png)
+
+安装方法：
+
+```sh
+wget -qO- https://get.casaos.io | sudo bash
+```
+
+或者
+
+```sh
+curl -fsSL https://get.casaos.io | sudo bash
+```
 
 ## Docker 常用命令
 
