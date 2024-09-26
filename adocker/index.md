@@ -2,6 +2,10 @@
 
 ## Docker 安装
 
+1. 普通环境安装
+   [参考链接](https://docs.docker.com/get-started/get-docker/)
+2. NAS 环境安装
+
 ## Docker 常用命令
 
 systemctl start docker //启动 docker
