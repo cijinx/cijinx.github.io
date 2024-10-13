@@ -268,7 +268,7 @@ export default defineConfig({
           text:'服务部署',
           items:[
             {
-              text:'Immich',
+              text:'immich',
               link:'/adocker/aimmich'
             }
           ]
