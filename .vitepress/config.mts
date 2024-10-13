@@ -63,7 +63,7 @@ export default defineConfig({
       { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'},
       { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
       {
-        text: 'Web', activeMatch: ['/abunjs/',],
+        text: 'Web', activeMatch: '/abunjs/',
         items: [
           { text: 'BunJS', link: '/abunjs/index'}
         ]
@@ -261,6 +261,15 @@ export default defineConfig({
             {
               text:'开始',
               link:'/adocker/index'
+            }
+          ]
+        },
+        {
+          text:'服务部署',
+          items:[
+            {
+              text:'Immich',
+              link:'/adocker/aimmich'
             }
           ]
         }
