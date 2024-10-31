@@ -63,9 +63,10 @@ export default defineConfig({
       { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'},
       { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
       {
-        text: 'Web', activeMatch: '/abunjs/',
+        text: '前端', activeMatch: '/apps/',
         items: [
-          { text: 'BunJS', link: '/abunjs/index'}
+          { text: 'HarmonyOS', link: '/apps/aharmonyos/index'},
+          { text: 'BunJS', link: '/apps/abunjs/index'}
         ]
       }
     ],
@@ -274,18 +275,21 @@ export default defineConfig({
           ]
         }
       ],
-      '/abunjs/':[
+      '/apps/aharmonyos/':[
+        {'text':'开始', link:'/apps/aharmonyos/index'}
+      ],
+      '/apps/abunjs/':[
         {
           text:'安装',
-          link:'/abunjs/index'
+          link:'/apps/abunjs/index'
         },
         {
           text:'运行时',
-          link:'/abunjs/runtime'
+          link:'/apps/abunjs/runtime'
         },
         {
           text:'包管理',
-          link:'/abunjs/manager'
+          link:'/apps/abunjs/manager'
         }
       ],
     }
