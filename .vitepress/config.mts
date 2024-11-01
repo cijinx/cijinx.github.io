@@ -276,7 +276,14 @@ export default defineConfig({
         }
       ],
       '/apps/aharmonyos/':[
-        {'text':'开始', link:'/apps/aharmonyos/index'}
+        {'text':'开始', link:'/apps/aharmonyos/index'},
+        {'text':'ArkTS工程目录结构',link:'/apps/aharmonyos/astage'},
+        {
+          'text':'基础',
+          items:[
+            
+          ]
+        }
       ],
       '/apps/abunjs/':[
         {
