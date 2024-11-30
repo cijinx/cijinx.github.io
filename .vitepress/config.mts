@@ -56,11 +56,19 @@ export default defineConfig({
       { text: 'Linux', activeMatch: '/alinux/',
         items: [
           { text: 'Linux', link: '/alinux/index' },
+          { text: 'PVE', link: '/alinux/apve' },
+          { text: 'OpenWRT', link: '/alinux/aopenwrt' },
           { text: 'Nginx', link: '/alinux/anginx' },
           { text: 'Frp', link: '/alinux/afrp' }
         ]
       },
-      { text: 'Docker', link: '/adocker/', activeMatch: '/adocker/'},
+      { text: 'Docker', activeMatch: '/adocker/',
+        items: [
+          { text: 'Docker', link: '/adocker/index' },
+          { text: 'Redis', link: '/adocker/aredis' },
+          { text: 'Immich', link: '/adocker/aimmich' }
+        ]
+      },
       { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
       {
         text: '前端', activeMatch: '/apps/',
