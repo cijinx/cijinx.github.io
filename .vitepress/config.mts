@@ -307,6 +307,25 @@ export default defineConfig({
           link:'/apps/abunjs/manager'
         }
       ],
+      '/zkali':[
+        {
+          text:'虚拟机安装KALI',
+          link:'/zkali/index'
+        },
+        {
+          text:'信息收集',
+          items:[
+            {
+              text:'获取IP地址',
+              link:'/zkali/ainfo'
+            },
+            {
+              text:'DNS 信息收集',
+              link:'/zkali/ainfodns'
+            }
+          ]
+        }
+      ]
     }
   }
 })
