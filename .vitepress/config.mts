@@ -277,6 +277,18 @@ export default defineConfig({
           text:'服务部署',
           items:[
             {
+              text:'Portainer',
+              link:'/adocker/aportainer'
+            },
+            {
+              text:'Homarr',
+              link:'/adocker/ahomarr'
+            },
+            {
+              text:'Redis',
+              link:'/adocker/aredis'
+            },
+            {
               text:'immich',
               link:'/adocker/aimmich'
             }

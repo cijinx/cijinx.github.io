@@ -1,4 +1,4 @@
-![award](/images/immich.png)
+![award](/images/immich.svg)
 
 # immich 高性能自托管照片和视频管理解决方案
 
