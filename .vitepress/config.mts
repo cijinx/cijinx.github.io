@@ -285,6 +285,10 @@ export default defineConfig({
               link:'/adocker/ahomarr'
             },
             {
+              text:'Registry',
+              link:'/adocker/aregistry'
+            },
+            {
               text:'Redis',
               link:'/adocker/aredis'
             },
