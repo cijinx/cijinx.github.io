@@ -6,7 +6,7 @@
 
 ## Add
 
-<span style="color:#FF3030">初始配置略过</span>
+描述：将设备属性从 (设备路径的映射`plist dict`)设置为(变量名和值的映射`plist dict`)，其中变量名称和值的格式为`plist metadata`。
 
 ## Delete
 
