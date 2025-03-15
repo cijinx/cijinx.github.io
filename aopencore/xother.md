@@ -52,3 +52,23 @@
 - `Full` 在 bootloader 启动时，在 UEFI 变量存储中创建或更新最高优先级的启动项。要使用这个选项，必须同时开启 `RequestBootVarRouting`。
 - `Short` 创建一个短的、非完整的启动项。此值对于某些固件很有用（例如：Insyde），或者其他无法处理完整设备路径的固件。
 - `System` 不创建启动项，而是认为该项是 blessed 的。这种 variant 在依赖 `ForceBooterSignature` 属性和 OpenCore 启动器路径时非常有用。管理是通过 bless 工具进行的，不涉及 OpenCore。
+
+## 启用 KASLR 方式内存注入
+
+内存注入方式包括 KASLR 方式(分布式注射到各个内存地址中)以及连续性方式。在使用 KASLR 时，PCIe 加载到内存，可能会占据所有 avaliable 值而影响 OC 的内核以及内核缓存无法注入，导致启动失败。
+
+KASLR 是更加高效的内存注入方式，但不代表每台机器都能使用这种方案，文档中提供两种关于内存的设置：
+
+1. 开启 KASLR 内存注入方式:
+
+   - `DevirtualiseMmio` 设置 `True`
+   - `ProtectUefiServices` 设置 `True`
+   - 删除 `boot-args` 中的 `slide=1` 参数
+   - 删除 `Drivers` 中的 `Memoryallocations.efi` 驱动
+
+2. 开启连续性内存注入方式:
+
+   - `DevirtualiseMmio` 设置 `True`
+   - `ProtectUefiServices` 设置 `False`
+   - 保留 `boot-args` 中的 `slide=1` 参数
+   - 保留 `Drivers` 中的 `Memoryallocations.efi` 驱动
