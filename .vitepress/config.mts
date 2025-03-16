@@ -178,6 +178,7 @@ export default defineConfig({
         {
           text:'安装指南',
           items:[
+            {text:'Coffee Lake(9代台式主机)',link:"/aopencore/bcoffeelake"},
             {text:'Comet Lake(10代台式主机)',link:"/aopencore/bcometlake"}
           ]
         },
