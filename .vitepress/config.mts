@@ -188,6 +188,12 @@ export default defineConfig({
             {text:'其他优化项',link:"/aopencore/xother"},
             {text:'删除 config 多余配置项',link:"/aopencore/xdel"}
           ]
+        },
+        {
+          text:'SSDT定制',
+          items:[
+            {text:'SSDT-PLUG',link:"/aopencore/splug"},
+          ]
         }
       ],
       '/apython/':[
