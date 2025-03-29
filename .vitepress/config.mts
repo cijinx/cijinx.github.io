@@ -64,9 +64,27 @@ export default defineConfig({
       },
       { text: 'Docker', activeMatch: '/adocker/',
         items: [
-          { text: 'Docker', link: '/adocker/index' },
-          { text: 'Redis', link: '/adocker/aredis' },
-          { text: 'Immich', link: '/adocker/aimmich' }
+          {
+            items: [
+              {text: '开始', link: '/adocker/index'}
+            ]
+          },
+          {
+            text: '开发',
+            items: [
+              { text: 'Portainer', link: '/adocker/aportainer' },
+              { text: 'Homarr', link: '/adocker/ahomarr' },
+              { text: 'Registry', link: '/adocker/aregistry' },
+              { text: 'MySQL', link: '/adocker/amysql' },
+              { text: 'Redis', link: '/adocker/aredis' },
+            ]
+          },
+          {
+            text: 'NAS',
+            items: [
+              { text: 'Immich', link: '/adocker/aimmich' }
+            ]
+          },
         ]
       },
       { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
@@ -294,6 +312,10 @@ export default defineConfig({
             {
               text:'Registry',
               link:'/adocker/aregistry'
+            },
+            {
+              text:'MySQL',
+              link:'/adocker/amysql'
             },
             {
               text:'Redis',
