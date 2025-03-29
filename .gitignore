@@ -1,5 +1,6 @@
 .idea
 package-lock.json
+bun.lock
 bun.lockb
 yarn.lock
 node_modules
