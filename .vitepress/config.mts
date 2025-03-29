@@ -49,54 +49,6 @@ export default defineConfig({
       }
     },
 
-    nav: [
-      { text: '首页', link: '/', activeMatch: '' },
-      { text: 'VitePress', link: '/avitepress/', activeMatch: '/avitepress/'},
-      { text: 'OpenCore', link: '/aopencore/', activeMatch: '/aopencore/'},
-      { text: 'Linux', activeMatch: '/alinux/',
-        items: [
-          { text: 'Linux', link: '/alinux/index' },
-          { text: 'PVE', link: '/alinux/apve' },
-          { text: 'OpenWRT', link: '/alinux/aopenwrt' },
-          { text: 'Nginx', link: '/alinux/anginx' },
-          { text: 'Frp', link: '/alinux/afrp' }
-        ]
-      },
-      { text: 'Docker', activeMatch: '/adocker/',
-        items: [
-          {
-            items: [
-              {text: '开始', link: '/adocker/index'}
-            ]
-          },
-          {
-            text: '开发',
-            items: [
-              { text: 'Portainer', link: '/adocker/aportainer' },
-              { text: 'Homarr', link: '/adocker/ahomarr' },
-              { text: 'Registry', link: '/adocker/aregistry' },
-              { text: 'MySQL', link: '/adocker/amysql' },
-              { text: 'Redis', link: '/adocker/aredis' },
-            ]
-          },
-          {
-            text: 'NAS',
-            items: [
-              { text: 'Immich', link: '/adocker/aimmich' }
-            ]
-          },
-        ]
-      },
-      { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
-      {
-        text: '前端', activeMatch: '/apps/',
-        items: [
-          { text: 'HarmonyOS', link: '/apps/aharmonyos/index'},
-          { text: 'BunJS', link: '/apps/abunjs/index'}
-        ]
-      }
-    ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/MartinOvO' },
       {
@@ -130,6 +82,52 @@ export default defineConfig({
       prev: '上一篇',
       next: '下一篇'
     },
+
+    nav: [
+      { text: '首页', link: '/', activeMatch: '' },
+      { text: 'VitePress', link: '/avitepress/', activeMatch: '/avitepress/'},
+      { text: 'OpenCore', link: '/aopencore/', activeMatch: '/aopencore/'},
+      { text: 'Linux', activeMatch: '/alinux/',
+        items: [
+          { text: 'Linux', link: '/alinux/index' },
+          { text: 'PVE', link: '/alinux/apve' },
+          { text: 'OpenWRT', link: '/alinux/aopenwrt' },
+          { text: 'Nginx', link: '/alinux/anginx' },
+          { text: 'Frp', link: '/alinux/afrp' }
+        ]
+      },
+      { text: 'Docker', activeMatch: '/adocker/',
+        items: [
+          {
+            items: [
+              {text: '开始', link: '/adocker/index'}
+            ]
+          },
+          {
+            items: [
+              { text: 'Portainer', link: '/adocker/aportainer' },
+              { text: 'Homarr', link: '/adocker/ahomarr' },
+              { text: 'Registry', link: '/adocker/aregistry' },
+              { text: 'MySQL', link: '/adocker/amysql' },
+              { text: 'Redis', link: '/adocker/aredis' },
+            ]
+          },
+          {
+            items: [
+              { text: 'Immich', link: '/adocker/aimmich' }
+            ]
+          },
+        ]
+      },
+      { text: 'Python', link: '/apython/', activeMatch: '/apython/'},
+      {
+        text: '前端', activeMatch: '/apps/',
+        items: [
+          { text: 'HarmonyOS', link: '/apps/aharmonyos/index'},
+          { text: 'BunJS', link: '/apps/abunjs/index'}
+        ]
+      }
+    ],
 
     sidebar: {
       '/avitepress/':[
