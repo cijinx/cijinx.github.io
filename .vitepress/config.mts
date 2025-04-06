@@ -89,11 +89,24 @@ export default defineConfig({
       { text: 'OpenCore', link: '/aopencore/', activeMatch: '/aopencore/'},
       { text: 'Linux', activeMatch: '/alinux/',
         items: [
-          { text: 'Linux', link: '/alinux/index' },
-          { text: 'PVE', link: '/alinux/apve' },
-          { text: 'OpenWRT', link: '/alinux/aopenwrt' },
-          { text: 'Nginx', link: '/alinux/anginx' },
-          { text: 'Frp', link: '/alinux/afrp' }
+          {
+            items: [
+              { text: '开始', link: '/alinux/index' }
+            ]
+          },
+          {
+            items: [
+              { text: 'PVE', link: '/alinux/apve' },
+              { text: 'OpenWRT', link: '/alinux/aopenwrt' },
+            ]
+          },
+          {
+            items: [
+              { text: 'Nginx', link: '/alinux/anginx' },
+              { text: 'Frp', link: '/alinux/afrp' },
+              { text: 'RustDesk', link: '/alinux/arustdesk' }
+            ]
+          }
         ]
       },
       { text: 'Docker', activeMatch: '/adocker/',
@@ -130,17 +143,17 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/avitepress/':[
+      '/avitepress/': [
         {
-          text:'创建 VitePress',
-          items:[
+          text: '创建 VitePress',
+          items: [
             {
-              text:'开始',
-              link:'/avitepress/index'
+              text: '开始',
+              link: '/avitepress/index'
             },
             {
-              text:'部署',
-              link:'/avitepress/adeploy'
+              text: '部署',
+              link: '/avitepress/adeploy'
             }
           ]
         },
@@ -167,20 +180,20 @@ export default defineConfig({
           ]
         },
       ],
-      '/aopencore/':[
+      '/aopencore/': [
         {
-          text:'关于OpenCore',
+          text: '关于OpenCore',
           items:[
             {
-              text:'开始',
-              link:'/aopencore/index'
+              text: '开始',
+              link: '/aopencore/index'
             }
           ]
         },
         {
-          text:'配置Config',
+          text: '配置Config',
           collapsed: true,
-          items:[
+          items: [
             { text: "ACPI", link: "/aopencore/aacpi" },
             { text: "Booter", link: "/aopencore/abooter" },
             { text: "DeviceProperties", link: "/aopencore/adeviceproperties" },
@@ -192,179 +205,179 @@ export default defineConfig({
           ]
         },
         {
-          text:'安装指南',
-          items:[
-            {text:'Coffee Lake(9代台式主机)',link:"/aopencore/bcoffeelake"},
-            {text:'Comet Lake(10代台式主机)',link:"/aopencore/bcometlake"}
+          text: '安装指南',
+          items: [
+            { text:'Coffee Lake(9代台式主机)',link:"/aopencore/bcoffeelake" },
+            { text:'Comet Lake(10代台式主机)',link:"/aopencore/bcometlake" }
           ]
         },
         {
-          text:'定制优化',
-          items:[
-            {text:'其他优化项',link:"/aopencore/xother"},
-            {text:'删除 config 多余配置项',link:"/aopencore/xdel"}
+          text: '定制优化',
+          items: [
+            { text: '其他优化项', link: "/aopencore/xother" },
+            { text: '删除 config 多余配置项', link: "/aopencore/xdel" }
           ]
         },
         {
-          text:'SSDT定制',
-          items:[
-            {text:'SSDT-PLUG',link:"/aopencore/splug"},
+          text: 'SSDT定制',
+          items: [
+            { text: 'SSDT-PLUG', link: "/aopencore/splug" },
           ]
         }
       ],
-      '/apython/':[
+      '/apython/': [
         {
-          text:'Python',
-          items:[
+          text: 'Python',
+          items: [
             {
-              text:'开始',
-              link:'/apython/index'
+              text: '开始',
+              link: '/apython/index'
             }
           ]
         },
         {
-          text:'Django',
+          text: 'Django',
           collapsed: true,
-          items:[
+          items: [
             {
-              text:'开始',
-              link:'/apython/adjangoa'
+              text: '开始',
+              link: '/apython/adjangoa'
             },
             {
-              text:'创建',
-              link:'/apython/adjangob'
+              text: '创建',
+              link: '/apython/adjangob'
             },
             {
-              text:'第一个 Django 应用程序 - 1',
-              link:'/apython/bdjangoa'
+              text: '第一个 Django 应用程序 - 1',
+              link: '/apython/bdjangoa'
             },
             {
-              text:'安装数据库驱动模块',
-              link:'/apython/adjangoc'
+              text: '安装数据库驱动模块',
+              link: '/apython/adjangoc'
             },
             {
-              text:'第一个 Django 应用程序 - 2',
-              link:'/apython/bdjangob'
+              text: '第一个 Django 应用程序 - 2',
+              link: '/apython/bdjangob'
             },
             {
-              text:'第一个 Django 应用程序 - 3',
-              link:'/apython/bdjangoc'
+              text: '第一个 Django 应用程序 - 3',
+              link: '/apython/bdjangoc'
             },
             {
-              text:'第一个 Django 应用程序 - 4',
-              link:'/apython/bdjangod'
+              text: '第一个 Django 应用程序 - 4',
+              link: '/apython/bdjangod'
             }
           ]
         }
       ],
-      '/alinux/':[
+      '/alinux/': [
         {
-          text:'Linux',
-          items:[
+          text: 'Linux',
+          items: [
             {
-              text:'开始',
-              link:'/alinux/index'
+              text: '开始',
+              link: '/alinux/index'
             }
           ]
         },
         {
-          text:'Nginx',
-          items:[
+          text: '系统',
+          items: [
             {
-              text:'nginx文档',
-              link:'/alinux/anginx'
+              text: 'nginx文档',
+              link: '/alinux/anginx'
             }
           ]
         },
         {
-          text:'Frp',
-          items:[
+          text: '应用',
+          items: [
             {
-              text:'Frp文档',
-              link:'/alinux/afrp'
+              text: 'Frp文档',
+              link: '/alinux/afrp'
             }
           ]
         }
       ],
-      '/adocker/':[
+      '/adocker/': [
         {
-          text:'Docker',
-          items:[
+          text: 'Docker',
+          items: [
             {
-              text:'开始',
-              link:'/adocker/index'
+              text: '开始',
+              link: '/adocker/index'
             }
           ]
         },
         {
-          text:'服务部署',
-          items:[
+          text: '服务部署',
+          items: [
             {
-              text:'Portainer',
-              link:'/adocker/aportainer'
+              text: 'Portainer',
+              link: '/adocker/aportainer'
             },
             {
-              text:'Homarr',
-              link:'/adocker/ahomarr'
+              text: 'Homarr',
+              link: '/adocker/ahomarr'
             },
             {
-              text:'Registry',
-              link:'/adocker/aregistry'
+              text: 'Registry',
+              link: '/adocker/aregistry'
             },
             {
-              text:'MySQL',
-              link:'/adocker/amysql'
+              text: 'MySQL',
+              link: '/adocker/amysql'
             },
             {
-              text:'Redis',
-              link:'/adocker/aredis'
+              text: 'Redis',
+              link: '/adocker/aredis'
             },
             {
-              text:'immich',
-              link:'/adocker/aimmich'
+              text: 'immich',
+              link: '/adocker/aimmich'
             }
           ]
         }
       ],
-      '/apps/aharmonyos/':[
-        {'text':'开始', link:'/apps/aharmonyos/index'},
-        {'text':'ArkTS工程目录结构',link:'/apps/aharmonyos/astage'},
+      '/apps/aharmonyos/': [
+        { text: '开始', link: '/apps/aharmonyos/index' },
+        { text: 'ArkTS工程目录结构', link: '/apps/aharmonyos/astage' },
         {
-          'text':'基础',
+          'text': '基础',
           items:[
             
           ]
         }
       ],
-      '/apps/abunjs/':[
+      '/apps/abunjs/': [
         {
-          text:'安装',
-          link:'/apps/abunjs/index'
+          text: '安装',
+          link: '/apps/abunjs/index'
         },
         {
-          text:'运行时',
-          link:'/apps/abunjs/runtime'
+          text: '运行时',
+          link: '/apps/abunjs/runtime'
         },
         {
-          text:'包管理',
-          link:'/apps/abunjs/manager'
+          text: '包管理',
+          link: '/apps/abunjs/manager'
         }
       ],
-      '/zkali':[
+      '/zkali': [
         {
-          text:'虚拟机安装KALI',
-          link:'/zkali/index'
+          text: '虚拟机安装KALI',
+          link: '/zkali/index'
         },
         {
-          text:'信息收集',
-          items:[
+          text: '信息收集',
+          items: [
             {
-              text:'获取IP地址',
-              link:'/zkali/ainfo'
+              text: '获取IP地址',
+              link: '/zkali/ainfo'
             },
             {
-              text:'DNS 信息收集',
-              link:'/zkali/ainfodns'
+              text: 'DNS 信息收集',
+              link: '/zkali/ainfodns'
             }
           ]
         }
