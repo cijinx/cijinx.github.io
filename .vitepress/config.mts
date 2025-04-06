@@ -283,19 +283,16 @@ export default defineConfig({
         {
           text: '系统',
           items: [
-            {
-              text: 'nginx文档',
-              link: '/alinux/anginx'
-            }
+            { text: 'PVE', link: '/alinux/apve' },
+            { text: 'OpenWRT', link: '/alinux/aopenwrt' }
           ]
         },
         {
           text: '应用',
           items: [
-            {
-              text: 'Frp文档',
-              link: '/alinux/afrp'
-            }
+            { text: 'Nginx', link: '/alinux/anginx' },
+            { text: 'Frp', link: '/alinux/afrp' },
+            { text: 'RustDesk', link: '/alinux/arustdesk' }
           ]
         }
       ],
