@@ -51,13 +51,13 @@ immich-machine-learning 下载
 docker pull ghcr.io/immich-app/immich-machine-learning:release
 ```
 
-redis 下载
+~~redis 下载~~
 
 ```sh
 docker pull redis:6.2
 ```
 
-Post­greSQL 下载
+~~Post­greSQL 下载~~
 
 ```sh
 docker pull tensorchord/pgvecto-rs:pg14-v0.2.0
