@@ -132,8 +132,8 @@ export default defineConfig({
       { text: "Python", link: "/apython/", activeMatch: "/apython/" },
       {
         text: "Bun",
+        link: "/abunjs/",
         activeMatch: "/abunjs/",
-        items: [{ text: "BunJS", link: "/abunjs/index" }],
       },
     ],
 
