@@ -218,7 +218,14 @@ export default defineConfig({
         },
         {
           text: "SSDT定制",
-          items: [{ text: "SSDT-PLUG", link: "/aopencore/splug" }],
+          items: [
+            { text: "获取 DSDT 的副本", link: "/aopencore/sdsdt" },
+            { text: "SSDT-PLUG", link: "/aopencore/splug" },
+            { text: "SSDT-EC-USBX", link: "/aopencore/secusbx" },
+            { text: "SSDT-AWAC", link: "/aopencore/sawac" },
+            { text: "SSDT-PMC", link: "/aopencore/spmc" },
+            { text: "SSDT-RHUB", link: "/aopencore/srhub" },
+          ],
         },
       ],
       "/apython/": [
