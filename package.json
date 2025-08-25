@@ -12,11 +12,11 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "sass": "^1.89.2",
-    "vitepress": "^1.6.3",
-    "vue": "^3.5.16"
+    "sass": "^1.90.0",
+    "vitepress": "^2.0.0-alpha.12",
+    "vue": "^3.5.19"
   },
   "peerDependencies": {
-    "typescript": "^5.7.2"
+    "typescript": "^5.9.2"
   }
 }
