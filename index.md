@@ -3,8 +3,8 @@ layout: home
 
 hero:
   {
-    name: "MartinMac",
-    text: "MartinMac",
+    name: "cijinx",
+    text: "cijinx",
     tagline: "QQ: 691585101",
     image: "/images/award.png",
     actions:

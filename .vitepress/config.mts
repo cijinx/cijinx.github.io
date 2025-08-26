@@ -3,16 +3,16 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   lastUpdated: true,
   lang: "zh-CN",
-  title: "MartinMac",
-  description: "MartinMac Site",
-  titleTemplate: "MartinMac | :title",
+  title: "cijinx",
+  description: "Cijinx Site",
+  titleTemplate: "cijinx | :title",
   head: [["link", { rel: "icon", href: "/logo.svg" }]],
   markdown: {
     lineNumbers: true,
   },
 
   themeConfig: {
-    siteTitle: "MartinMac",
+    siteTitle: "Cijinx",
     logo: "/logo.svg",
 
     lastUpdated: {
@@ -48,7 +48,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/MartinOvO" },
+      { icon: "github", link: "https://github.com/cijinx" },
       {
         icon: {
           svg: `<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +72,7 @@ export default defineConfig({
     footer: {
       message: "在 ISC 许可下发布",
       copyright:
-        '<a href="https://gitee.com/martinmac">MartinMac</a>版权所有 © 2020至今 <a href="https://beian.miit.gov.cn">苏ICP备20042680号-1</a>',
+        '<a href="https://github.com/cijinx">cijinx</a>版权所有 © 2020至今 <a href="https://beian.miit.gov.cn">苏ICP备20042680号-1</a>',
     },
 
     outline: 2,
