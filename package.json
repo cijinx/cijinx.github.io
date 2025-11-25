@@ -19,5 +19,8 @@
   "peerDependencies": {
     "typescript": "^5.9.3"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "md-editor-v3": "^6.2.0"
+  }
 }

@@ -14,7 +14,7 @@ hero:
           text: "Markdown Example",
           link: "/markdown-examples",
         },
-        { theme: "alt", text: "API Example", link: "/api-examples" },
+        { theme: "brand", text: "MarkDown在线编辑", link: "/md_editor" },
       ],
   }
 
