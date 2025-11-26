@@ -9,12 +9,12 @@ hero:
     image: "/images/award.png",
     actions:
       [
+        { theme: "brand", text: "MarkDown在线编辑", link: "/ztools/md_editor" },
         {
-          theme: "brand",
+          theme: "alt",
           text: "Markdown Example",
-          link: "/markdown-examples",
+          link: "/ztools/markdown-examples",
         },
-        { theme: "brand", text: "MarkDown在线编辑", link: "/md_editor" },
       ],
   }
 

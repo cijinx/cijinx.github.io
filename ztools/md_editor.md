@@ -2,7 +2,7 @@
 layout: home
 ---
 
-<MdEditor v-model="text" />
+<MdEditor v-model="text"></MdEditor>
 
 <script setup>
 import { ref } from 'vue';
