@@ -186,7 +186,7 @@ export default defineConfig({
           ],
         },
         {
-          text: "配置Config",
+          text: "Config配置项说明",
           collapsed: true,
           items: [
             { text: "ACPI", link: "/aopencore/aacpi" },
@@ -210,13 +210,6 @@ export default defineConfig({
           ],
         },
         {
-          text: "定制优化",
-          items: [
-            { text: "其他优化项", link: "/aopencore/xother" },
-            { text: "删除 config 多余配置项", link: "/aopencore/xdel" },
-          ],
-        },
-        {
           text: "SSDT定制",
           items: [
             { text: "获取 DSDT 的副本", link: "/aopencore/sdsdt" },
@@ -225,6 +218,13 @@ export default defineConfig({
             { text: "SSDT-AWAC", link: "/aopencore/sawac" },
             { text: "SSDT-PMC", link: "/aopencore/spmc" },
             { text: "SSDT-RHUB", link: "/aopencore/srhub" },
+          ],
+        },
+        {
+          text: "定制优化",
+          items: [
+            { text: "其他优化项", link: "/aopencore/xother" },
+            { text: "删除 config 多余配置项", link: "/aopencore/xdel" },
           ],
         },
       ],

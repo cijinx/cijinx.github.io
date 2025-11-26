@@ -18,10 +18,7 @@ const { theme, page, frontmatter } = useData()
 ## Results
 
 ### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
+<pre>{{ theme.search }}</pre>
 
 ### Page Frontmatter
 <pre>{{ frontmatter }}</pre>
@@ -36,7 +33,7 @@ const { site, theme, page, frontmatter } = useData()
 ## Results
 
 ### Theme Data
-<pre>{{ theme }}</pre>
+<pre>{{ theme.search }}</pre>
 
 ### Page Data
 <pre>{{ page }}</pre>
