@@ -48,11 +48,11 @@ const search = ref(`
 
 \`\`\`mermaid
 flowchart TD 
-  PNP0C09结果数量 --> 0 --> 创建虚拟EC --> 结束
-  PNP0C09结果数量 --> 1 --> 真正的EC控制器 --> 结束
+  PNP0C09结果数量 --> 0 --> 创建虚拟EC
+  PNP0C09结果数量 --> 1 --> 真正的EC控制器
   PNP0C09结果数量--> 2 --> 查看EC控制器属性 
-  查看EC控制器属性 --> 有三个属性 --> 是真正的EC控制器 --> 结束
-  查看EC控制器属性 --> 没有三个属性 --> 不是真正的EC控制器 --> 结束
+  查看EC控制器属性 --> 有三个属性 --> 是真正的EC控制器
+  查看EC控制器属性 --> 没有三个属性 --> 不是真正的EC控制器忽略
 \`\`\`
 
 `);
@@ -61,16 +61,16 @@ const text = ref(`
 
 \`\`\`mermaid
 flowchart TD 
-  控制器已命名为EC --> 是 --> 无需创建EC --> 结束
+  控制器已命名为EC --> 是 --> 无需创建EC
   控制器已命名为EC --> 否 --> 需要创建EC
   需要创建EC --> 笔记本电脑 --> 删除注释内容
   需要创建EC --> 台式电脑 --> PNP0C09结果数量
   
   PNP0C09结果数量 --> 0 --> 删除注释内容
-  PNP0C09结果数量 --> 1或更多 --> PNP0C09是否有_STA方法
+  PNP0C09结果数量 --> 1或2 --> PNP0C09是否有_STA方法
   
   PNP0C09是否有_STA方法 --> 有 --> 删除注释内容 --> 修改路径
-  PNP0C09是否有_STA方法 --> 没有 --> 解开注释内容 --> 修改路径 --> 结束
+  PNP0C09是否有_STA方法 --> 没有 --> 解开注释内容 --> 修改路径
 \`\`\`
 
 `);
@@ -80,7 +80,7 @@ const scrollElement = document.documentElement;
 ### `PNP0C09` 已命名为 `EC`
 无需创建 `SSDT-EC` ，但是如果是Skylake（第六代桌面处理器）或者以后的CPU需要加载 `SSDT-USBX.aml`。
 
-可以再此获取预构建的[`SSDT-USBX.aml`](https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-USBX.aml)。
+可以在此获取预构建的[`SSDT-USBX.aml`](https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-USBX.aml)。
 
 ### 获取示例的SSDT文件
 - [SSDT-EC-USBX](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/AcpiSamples/Source/SSDT-EC-USBX.dsl)
