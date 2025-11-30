@@ -16,7 +16,7 @@ SSDT-AWAC/SSDT-RTC0 的目的是修复新主板的系统时钟，主要是以下
 
 ## 查找 DSDT 相关信息
 
-如何获取硬件的 DSDT 副本请查看[此文档](./sdsdt.md)。
+如何获取硬件的 DSDT 副本请查看[此文档](./dsdt.md)。
 
 ## 定制修改
 
@@ -55,7 +55,7 @@ const scrollElement = document.documentElement;
 ## X99或X299定制AWAC
 
 :::tip 注意
-X99或X299定制AWAC请[查看此文档](./sawacx.md)
+X99或X299定制AWAC请[查看此文档](./awacx.md)
 :::
 
 ## 定制AWAC
