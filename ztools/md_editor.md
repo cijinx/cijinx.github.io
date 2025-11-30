@@ -16,8 +16,8 @@ const text = ref(`
 ## 详细文档
 `);
 
-const onSave = (t, h) => {
-const blob = new Blob([t],{ type: 'text/markdown' });
+const onSave = (txt, html) => {
+const blob = new Blob([txt],{ type: 'text/markdown' });
 const url = URL.createObjectURL(blob);
 const a = document.createElement('a');
 a.href = url;
