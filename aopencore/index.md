@@ -134,12 +134,12 @@ EFI
 
 ## 配置 config.plist
 
-- [ACPI](./aacpi.md)
-- [Booter](./abooter.md)
-- [DeviceProperties](./adeviceproperties.md)
-- [Kernel](./akernel.md)
-- [Misc](./amisc.md)
-- [NVRAM](./anvram.md)
-- [PlatformInfo](./aplatforminfo.md)
-- [UEFI](./auefi.md)
+- [ACPI](./config/acpi.md)
+- [Booter](./config/booter.md)
+- [DeviceProperties](./config/deviceproperties.md)
+- [Kernel](./config/kernel.md)
+- [Misc](./config/misc.md)
+- [NVRAM](./config/nvram.md)
+- [PlatformInfo](./config/platforminfo.md)
+- [UEFI](./config/uefi.md)
 <hr>
