@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>tnas</title>
+    <g id="tnas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="truenas" transform="translate(16, 66)" fill-rule="nonzero">
+            <polygon id="Stroke-1" fill="#31BEEC" points="480 150.698953 480 252.978131 261.024376 379.460726 261.024376 277.188017"></polygon>
+            <path d="M219.124389,277.186078 L219.124389,379.463962 L0,252.976189 L0,150.698306 L99.0160489,207.818248 C99.1265996,207.90594 99.2481533,207.978785 99.3776125,208.034928 L219.124389,277.186078 Z" id="Stroke-2" fill="#0095D5"></path>
+            <polygon id="Stroke-3" fill="#AEADAE" points="328.647775 189.765938 240.074383 240.9411 151.423374 189.765938 240.074383 138.590775"></polygon>
+            <polygon id="Stroke-4" fill="#0095D5" points="459.127622 114.458503 370.476614 165.633666 261.024376 102.350326 261.024376 0"></polygon>
+            <polygon id="Stroke-5" fill="#31BEEC" points="219.124389 0 219.124389 102.350326 109.523386 165.55605 20.8788455 114.458503"></polygon>
+        </g>
+    </g>
+</svg>
