@@ -10,11 +10,11 @@ hero:
     image: "/images/award.png",
     actions:
       [
-        { theme: "brand", text: "MarkDown在线编辑", link: "/ztools/md_editor" },
+        { theme: "brand", text: "MarkDown在线编辑", link: "/tools/md_editor" },
         {
           theme: "alt",
           text: "Markdown Example",
-          link: "/ztools/markdown-examples",
+          link: "/tools/markdown-examples",
         },
       ],
   }
@@ -24,49 +24,49 @@ features:
     {
       icon: { src: "/icons/vp.svg", width: "48", height: "48" },
       title: "VitePress",
-      link: "./avitepress/",
+      link: "./vitepress/",
       linkText: "查看文档",
     },
     {
       icon: { src: "/icons/oc.svg", width: "48", height: "48" },
       title: "OpenCore",
-      link: "./aopencore/",
+      link: "./opencore/",
       linkText: "查看文档",
     },
     {
       icon: { src: "/icons/pve.svg", width: "48", height: "48" },
       title: "ProxmoxVE",
-      link: "./alinux/",
+      link: "./linux/",
       linkText: "查看文档",
     },
     {
       icon: { src: "/icons/tnas.svg", width: "48", height: "48" },
       title: "TrueNAS",
-      link: "./alinux/",
+      link: "./linux/",
       linkText: "查看文档",
     },
     {
       icon: { src: "/icons/dk.svg", width: "48", height: "48" },
       title: "Docker",
-      link: "./adocker/",
+      link: "./docker/",
       linkText: "查看文档",
     },
     {
       icon: { src: "/icons/sql.svg", width: "48", height: "48" },
       title: "MySQL",
-      link: "./adocker/",
+      link: "./docker/",
       linkText: "查看文档",
     },
     {
       icon: { src: "/icons/dev.svg", width: "48", height: "48" },
       title: "OneDev",
-      link: "./adocker/",
+      link: "./docker/",
       linkText: "查看文档",
     },
     {
       icon: { src: "/icons/fin.svg", width: "48", height: "48" },
       title: "Jellyfin",
-      link: "./adocker/",
+      link: "./docker/",
       linkText: "查看文档",
     },
   ]

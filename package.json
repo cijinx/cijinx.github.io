@@ -1,19 +1,28 @@
 {
   "name": "cijinx",
-  "module": "index.ts",
-  "type": "module",
+  "version": "1.0.0",
+  "author": "Cijinx",
+  "main": "index.ts",
+  "description": "",
   "private": true,
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
   "devDependencies": {
     "@types/bun": "latest",
+    "sass": "^1.97.2",
     "vitepress": "^2.0.0-alpha.15",
     "vue": "^3.5.27"
   },
   "peerDependencies": {
     "typescript": "^5.9.3"
   },
-  "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  }
+  "dependencies": {
+    "md-editor-v3": "^6.3.1"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
 }

@@ -84,71 +84,71 @@ export default defineConfig({
 
     nav: [
       { text: "首页", link: "/", activeMatch: "" },
-      { text: "VitePress", link: "/avitepress/", activeMatch: "/avitepress/" },
-      { text: "OpenCore", link: "/aopencore/", activeMatch: "/aopencore/" },
+      { text: "VitePress", link: "/vitepress/", activeMatch: "/vitepress/" },
+      { text: "OpenCore", link: "/opencore/", activeMatch: "/opencore/" },
       {
         text: "Linux",
-        activeMatch: "/alinux/",
+        activeMatch: "/linux/",
         items: [
           {
-            items: [{ text: "开始", link: "/alinux/index" }],
+            items: [{ text: "开始", link: "/linux/index" }],
           },
           {
             items: [
-              { text: "PVE", link: "/alinux/apve" },
-              { text: "OpenWRT", link: "/alinux/aopenwrt" },
+              { text: "PVE", link: "/linux/pve" },
+              { text: "OpenWRT", link: "/linux/openwrt" },
             ],
           },
           {
             items: [
-              { text: "Nginx", link: "/alinux/anginx" },
-              { text: "Frp", link: "/alinux/afrp" },
-              { text: "RustDesk", link: "/alinux/arustdesk" },
+              { text: "Nginx", link: "/linux/nginx" },
+              { text: "Frp", link: "/linux/frp" },
+              { text: "RustDesk", link: "/linux/rustdesk" },
             ],
           },
         ],
       },
       {
         text: "Docker",
-        activeMatch: "/adocker/",
+        activeMatch: "/docker/",
         items: [
           {
-            items: [{ text: "开始", link: "/adocker/index" }],
+            items: [{ text: "开始", link: "/docker/index" }],
           },
           {
             items: [
-              { text: "Portainer", link: "/adocker/aportainer" },
-              { text: "Homarr", link: "/adocker/ahomarr" },
-              { text: "Registry", link: "/adocker/aregistry" },
-              { text: "MySQL", link: "/adocker/amysql" },
-              { text: "Redis", link: "/adocker/aredis" },
+              { text: "Portainer", link: "/docker/portainer" },
+              { text: "Homarr", link: "/docker/homarr" },
+              { text: "Registry", link: "/docker/registry" },
+              { text: "MySQL", link: "/docker/mysql" },
+              { text: "Redis", link: "/docker/redis" },
             ],
           },
           {
-            items: [{ text: "Immich", link: "/adocker/aimmich" }],
+            items: [{ text: "Immich", link: "/docker/immich" }],
           },
         ],
       },
-      { text: "Python", link: "/apython/", activeMatch: "/apython/" },
+      { text: "Python", link: "/python/", activeMatch: "/python/" },
       {
         text: "Bun",
-        link: "/abunjs/",
-        activeMatch: "/abunjs/",
+        link: "/bunjs/",
+        activeMatch: "/bunjs/",
       },
     ],
 
     sidebar: {
-      "/avitepress/": [
+      "/vitepress/": [
         {
           text: "创建 VitePress",
           items: [
             {
               text: "开始",
-              link: "/avitepress/index",
+              link: "/vitepress/index",
             },
             {
               text: "部署",
-              link: "/avitepress/adeploy",
+              link: "/vitepress/deploy",
             },
           ],
         },
@@ -157,11 +157,11 @@ export default defineConfig({
           items: [
             {
               text: "路由",
-              link: "/avitepress/arouting",
+              link: "/vitepress/routing",
             },
             {
               text: "Markdown语法扩展",
-              link: "/avitepress/amarkdown",
+              link: "/vitepress/markdown",
             },
           ],
         },
@@ -170,18 +170,18 @@ export default defineConfig({
           items: [
             {
               text: "站点配置",
-              link: "/avitepress/asiteconfig",
+              link: "/vitepress/siteconfig",
             },
           ],
         },
       ],
-      "/aopencore/": [
+      "/opencore/": [
         {
           text: "关于OpenCore",
           items: [
             {
               text: "开始",
-              link: "/aopencore/index",
+              link: "/opencore/index",
             },
           ],
         },
@@ -189,14 +189,14 @@ export default defineConfig({
           text: "Config配置项说明",
           collapsed: true,
           items: [
-            { text: "ACPI", link: "/aopencore/config/acpi" },
-            { text: "Booter", link: "/aopencore/config/booter" },
-            { text: "DeviceProperties", link: "/aopencore/config/deviceproperties" },
-            { text: "Kernel", link: "/aopencore/config/kernel" },
-            { text: "Misc", link: "/aopencore/config/misc" },
-            { text: "NVRAM", link: "/aopencore/config/nvram" },
-            { text: "PlatformInfo", link: "/aopencore/config/platforminfo" },
-            { text: "UEFI", link: "/aopencore/config/uefi" },
+            { text: "ACPI", link: "/opencore/config/acpi" },
+            { text: "Booter", link: "/opencore/config/booter" },
+            { text: "DeviceProperties", link: "/opencore/config/deviceproperties" },
+            { text: "Kernel", link: "/opencore/config/kernel" },
+            { text: "Misc", link: "/opencore/config/misc" },
+            { text: "NVRAM", link: "/opencore/config/nvram" },
+            { text: "PlatformInfo", link: "/opencore/config/platforminfo" },
+            { text: "UEFI", link: "/opencore/config/uefi" },
           ],
         },
         {
@@ -204,43 +204,43 @@ export default defineConfig({
           items: [
             {
               text: "Coffee Lake(9代台式主机)",
-              link: "/aopencore/install/coffeelake",
+              link: "/opencore/install/coffeelake",
             },
-            { text: "Comet Lake(10代台式主机)", link: "/aopencore/install/cometlake" },
+            { text: "Comet Lake(10代台式主机)", link: "/opencore/install/cometlake" },
           ],
         },
         {
           text: "SSDT定制",
           items: [
-            { text: "获取 DSDT 的副本", link: "/aopencore/ssdt/dsdt" },
-            { text: "SSDT-PLUG", link: "/aopencore/ssdt/plug" },
-            { text: "SSDT-EC-USBX", link: "/aopencore/ssdt/ecusbx" },
-            { text: "SSDT-AWAC", link: "/aopencore/ssdt/awac" },
-            { text: "SSDT-PMC", link: "/aopencore/ssdt/pmc" },
-            { text: "SSDT-RHUB", link: "/aopencore/ssdt/rhub" },
+            { text: "获取 DSDT 的副本", link: "/opencore/ssdt/dsdt" },
+            { text: "SSDT-PLUG", link: "/opencore/ssdt/plug" },
+            { text: "SSDT-EC-USBX", link: "/opencore/ssdt/ecusbx" },
+            { text: "SSDT-AWAC", link: "/opencore/ssdt/awac" },
+            { text: "SSDT-PMC", link: "/opencore/ssdt/pmc" },
+            { text: "SSDT-RHUB", link: "/opencore/ssdt/rhub" },
           ],
         },
         {
           text: "扩展优化",
           items: [
-            { text: "SSDT方法定制USB", link: "/aopencore/extras/xhub" },
+            { text: "SSDT方法定制USB", link: "/opencore/extras/xhub" },
           ],
         },
         {
           text: "定制优化",
           items: [
-            { text: "其他优化项", link: "/aopencore/last/other" },
-            { text: "删除 config 多余配置项", link: "/aopencore/last/del" },
+            { text: "其他优化项", link: "/opencore/last/other" },
+            { text: "删除 config 多余配置项", link: "/opencore/last/del" },
           ],
         },
       ],
-      "/apython/": [
+      "/python/": [
         {
           text: "Python",
           items: [
             {
               text: "开始",
-              link: "/apython/index",
+              link: "/python/index",
             },
           ],
         },
@@ -250,68 +250,68 @@ export default defineConfig({
           items: [
             {
               text: "开始",
-              link: "/apython/adjangoa",
+              link: "/python/djangoa",
             },
             {
               text: "创建",
-              link: "/apython/adjangob",
+              link: "/python/djangob",
             },
             {
               text: "第一个 Django 应用程序 - 1",
-              link: "/apython/bdjangoa",
+              link: "/python/bdjangoa",
             },
             {
               text: "安装数据库驱动模块",
-              link: "/apython/adjangoc",
+              link: "/python/adjangoc",
             },
             {
               text: "第一个 Django 应用程序 - 2",
-              link: "/apython/bdjangob",
+              link: "/python/bdjangob",
             },
             {
               text: "第一个 Django 应用程序 - 3",
-              link: "/apython/bdjangoc",
+              link: "/python/bdjangoc",
             },
             {
               text: "第一个 Django 应用程序 - 4",
-              link: "/apython/bdjangod",
+              link: "/python/bdjangod",
             },
           ],
         },
       ],
-      "/alinux/": [
+      "/linux/": [
         {
           text: "Linux",
           items: [
             {
               text: "开始",
-              link: "/alinux/index",
+              link: "/linux/index",
             },
           ],
         },
         {
           text: "系统",
           items: [
-            { text: "PVE", link: "/alinux/apve" },
-            { text: "OpenWRT", link: "/alinux/aopenwrt" },
+            { text: "PVE", link: "/linux/apve" },
+            { text: "OpenWRT", link: "/linux/aopenwrt" },
           ],
         },
         {
           text: "应用",
           items: [
-            { text: "Nginx", link: "/alinux/anginx" },
-            { text: "Frp", link: "/alinux/afrp" },
-            { text: "RustDesk", link: "/alinux/arustdesk" },
+            { text: "Nginx", link: "/linux/anginx" },
+            { text: "Frp", link: "/linux/frp" },
+            { text: "RustDesk", link: "/linux/rustdesk" },
           ],
         },
       ],
-      "/adocker/": [
+      "/docker/": [
         {
           text: "Docker",
           items: [
             {
               text: "开始",
-              link: "/adocker/index",
+              link: "/docker/index",
             },
           ],
         },
@@ -320,60 +320,60 @@ export default defineConfig({
           items: [
             {
               text: "Portainer",
-              link: "/adocker/aportainer",
+              link: "/docker/aportainer",
             },
             {
               text: "Homarr",
-              link: "/adocker/ahomarr",
+              link: "/docker/ahomarr",
             },
             {
               text: "Registry",
-              link: "/adocker/aregistry",
+              link: "/docker/aregistry",
             },
             {
               text: "MySQL",
-              link: "/adocker/amysql",
+              link: "/docker/amysql",
             },
             {
               text: "Redis",
-              link: "/adocker/aredis",
+              link: "/docker/aredis",
             },
             {
               text: "immich",
-              link: "/adocker/aimmich",
+              link: "/docker/aimmich",
             },
           ],
         },
       ],
-      "/abunjs/": [
+      "/bunjs/": [
         {
           text: "安装",
-          link: "/abunjs/index",
+          link: "/bunjs/index",
         },
         {
           text: "运行时",
-          link: "/abunjs/runtime",
+          link: "/bunjs/runtime",
         },
         {
           text: "包管理",
-          link: "/abunjs/manager",
+          link: "/bunjs/manager",
         },
       ],
-      "/zkali": [
+      "/kali": [
         {
           text: "虚拟机安装KALI",
-          link: "/zkali/index",
+          link: "/kali/index",
         },
         {
           text: "信息收集",
           items: [
             {
               text: "获取IP地址",
-              link: "/zkali/ainfo",
+              link: "/kali/ainfo",
             },
             {
               text: "DNS 信息收集",
-              link: "/zkali/ainfodns",
+              link: "/kali/ainfodns",
             },
           ],
         },
