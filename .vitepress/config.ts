@@ -234,51 +234,6 @@ export default defineConfig({
           ],
         },
       ],
-      "/python/": [
-        {
-          text: "Python",
-          items: [
-            {
-              text: "开始",
-              link: "/python/index",
-            },
-          ],
-        },
-        {
-          text: "Django",
-          collapsed: true,
-          items: [
-            {
-              text: "开始",
-              link: "/python/djangoa",
-            },
-            {
-              text: "创建",
-              link: "/python/djangob",
-            },
-            {
-              text: "第一个 Django 应用程序 - 1",
-              link: "/python/bdjangoa",
-            },
-            {
-              text: "安装数据库驱动模块",
-              link: "/python/adjangoc",
-            },
-            {
-              text: "第一个 Django 应用程序 - 2",
-              link: "/python/bdjangob",
-            },
-            {
-              text: "第一个 Django 应用程序 - 3",
-              link: "/python/bdjangoc",
-            },
-            {
-              text: "第一个 Django 应用程序 - 4",
-              link: "/python/bdjangod",
-            },
-          ],
-        },
-      ],
       "/linux/": [
         {
           text: "Linux",
@@ -292,14 +247,14 @@ export default defineConfig({
         {
           text: "系统",
           items: [
-            { text: "PVE", link: "/linux/apve" },
-            { text: "OpenWRT", link: "/linux/aopenwrt" },
+            { text: "PVE", link: "/linux/pve" },
+            { text: "OpenWRT", link: "/linux/openwrt" },
           ],
         },
         {
           text: "应用",
           items: [
-            { text: "Nginx", link: "/linux/anginx" },
+            { text: "Nginx", link: "/linux/nginx" },
             { text: "Frp", link: "/linux/frp" },
             { text: "RustDesk", link: "/linux/rustdesk" },
           ],
@@ -320,27 +275,38 @@ export default defineConfig({
           items: [
             {
               text: "Portainer",
-              link: "/docker/aportainer",
+              link: "/docker/portainer",
             },
             {
               text: "Homarr",
-              link: "/docker/ahomarr",
+              link: "/docker/homarr",
             },
             {
               text: "Registry",
-              link: "/docker/aregistry",
+              link: "/docker/registry",
             },
             {
               text: "MySQL",
-              link: "/docker/amysql",
+              link: "/docker/mysql",
             },
             {
               text: "Redis",
-              link: "/docker/aredis",
+              link: "/docker/redis",
             },
             {
               text: "immich",
-              link: "/docker/aimmich",
+              link: "/docker/immich",
+            },
+          ],
+        },
+      ],
+      "/python/": [
+        {
+          text: "Python",
+          items: [
+            {
+              text: "开始",
+              link: "/python/index",
             },
           ],
         },
@@ -357,25 +323,6 @@ export default defineConfig({
         {
           text: "包管理",
           link: "/bunjs/manager",
-        },
-      ],
-      "/kali": [
-        {
-          text: "虚拟机安装KALI",
-          link: "/kali/index",
-        },
-        {
-          text: "信息收集",
-          items: [
-            {
-              text: "获取IP地址",
-              link: "/kali/ainfo",
-            },
-            {
-              text: "DNS 信息收集",
-              link: "/kali/ainfodns",
-            },
-          ],
         },
       ],
     },
