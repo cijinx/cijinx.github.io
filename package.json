@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "sass": "^1.97.2",
+    "sass": "^1.97.3",
     "vitepress": "^2.0.0-alpha.15",
     "vue": "^3.5.27"
   },
