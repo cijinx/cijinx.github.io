@@ -1,6 +1,10 @@
 import { defineConfig } from "vitepress";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()]
+  },
   lastUpdated: true,
   lang: "zh-CN",
   title: "cijinx",
@@ -192,7 +196,10 @@ export default defineConfig({
           items: [
             { text: "ACPI", link: "/opencore/config/acpi" },
             { text: "Booter", link: "/opencore/config/booter" },
-            { text: "DeviceProperties", link: "/opencore/config/deviceproperties" },
+            {
+              text: "DeviceProperties",
+              link: "/opencore/config/deviceproperties",
+            },
             { text: "Kernel", link: "/opencore/config/kernel" },
             { text: "Misc", link: "/opencore/config/misc" },
             { text: "NVRAM", link: "/opencore/config/nvram" },
@@ -207,7 +214,10 @@ export default defineConfig({
               text: "Coffee Lake(9代台式主机)",
               link: "/opencore/install/coffeelake",
             },
-            { text: "Comet Lake(10代台式主机)", link: "/opencore/install/cometlake" },
+            {
+              text: "Comet Lake(10代台式主机)",
+              link: "/opencore/install/cometlake",
+            },
           ],
         },
         {
@@ -223,9 +233,7 @@ export default defineConfig({
         },
         {
           text: "扩展优化",
-          items: [
-            { text: "SSDT方法定制USB", link: "/opencore/extras/xhub" },
-          ],
+          items: [{ text: "SSDT方法定制USB", link: "/opencore/extras/xhub" }],
         },
         {
           text: "定制优化",
