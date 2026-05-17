@@ -1,4 +1,4 @@
-name: Deploy VitePress site to Pages
+name: 部署 VitePress 静态网站到 GitHub Pages
 
 on:
   push:
@@ -19,16 +19,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 检查
         uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
-      - name: Setup Pages
+      - name: 配置
         uses: actions/configure-pages@v5
-      - name: Install dependencies
+      - name: 下载依赖
         run: bun install
-      - name: Build with VitePress
+      - name: 编译
         run: bun run docs:build
-      - name: Upload artifact
+      - name: 上传
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
@@ -39,8 +39,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
+    name: 部署
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 部署到 GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
