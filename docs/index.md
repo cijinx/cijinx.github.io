@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: 文档示例
-      link: /markdown-examples
+      link: /vitepress/markdown-examples
     - theme: alt
       text: API 示例
-      link: /api-examples
+      link: /vitepress/api-examples
 
 features:
   - title: Feature A

@@ -12,4 +12,8 @@ bun install -y
 bun run docs:dev
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+运行项目build:
+
+```bash
+bun run docs:build
+```

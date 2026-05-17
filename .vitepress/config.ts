@@ -1,30 +1,28 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "docs",
-  
+
   title: "Cijinx's Blog",
   description: "Cijinx's Blog",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "首页", link: "/" },
+      { text: "示例", link: "/vitepress/markdown-examples" },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "示例",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: "Markdown Examples", link: "/vitepress/markdown-examples" },
+          { text: "Runtime API Examples", link: "/vitepress/api-examples" },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+    ],
+  },
+});
