@@ -1,23 +1,18 @@
 {
-  "name": "cijinx",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^21.0.1",
     "@commitlint/config-conventional": "^21.0.1",
     "@commitlint/prompt-cli": "^21.0.1",
-    "@types/bun": "latest",
     "husky": "^9.1.7",
-    "vitepress": "^2.0.0-alpha.17"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
+    "vite": "^8.0.13",
+    "vitepress": "^2.0.0-alpha.17",
+    "vue": "^3.5.34"
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
     "prepare": "husky",
     "commit": "commit"
   }
