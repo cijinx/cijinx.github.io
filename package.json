@@ -1,37 +1,22 @@
 {
   "name": "cijinx",
-  "version": "1.0.0",
-  "author": "Cijinx",
-  "main": "index.ts",
-  "description": "",
+  "module": "index.ts",
+  "type": "module",
   "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@types/bun": "latest",
+    "husky": "^9.1.7",
+    "vitepress": "^2.0.0-alpha.17"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "prepare": "husky",
-    "commit": "commit"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^20.5.3",
-    "@commitlint/config-conventional": "^20.5.3",
-    "@commitlint/prompt-cli": "^20.5.3",
-    "@types/bun": "latest",
-    "autoprefixer": "^10.5.0",
-    "husky": "^9.1.7",
-    "sass": "^1.99.0",
-    "vitepress": "^2.0.0-alpha.17",
-    "vue": "^3.5.33"
-  },
-  "peerDependencies": {
-    "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
-    "md-editor-v3": "^6.5.0",
-    "tailwindcss": "^4.2.4"
-  },
-  "trustedDependencies": [
-    "esbuild"
-  ]
+    "prepare": "husky"
+  }
 }
