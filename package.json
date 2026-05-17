@@ -6,6 +6,7 @@
   "devDependencies": {
     "@commitlint/cli": "^21.0.1",
     "@commitlint/config-conventional": "^21.0.1",
+    "@commitlint/prompt-cli": "^21.0.1",
     "@types/bun": "latest",
     "husky": "^9.1.7",
     "vitepress": "^2.0.0-alpha.17"
