@@ -1,17 +1,16 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "Cijinx's Blog"
+  name: "Cijinx"
   text: "Cijinx's Blog"
-  tagline: My great project tagline
+  tagline: 一个有趣的博客
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 文档示例
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: API 示例
       link: /api-examples
 
 features:

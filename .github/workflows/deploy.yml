@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: 检查
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
+      - uses: oven-sh/setup-bun@v2
       - name: 配置
         uses: actions/configure-pages@v5
       - name: 下载依赖

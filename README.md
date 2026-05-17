@@ -1,15 +1,15 @@
-# cijinx
+# Cijinx's Blog
 
-To install dependencies:
+下载依赖:
 
 ```bash
-bun install
+bun install -y
 ```
 
-To run:
+运行项目dev:
 
 ```bash
-bun run index.ts
+bun run docs:dev
 ```
 
 This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
