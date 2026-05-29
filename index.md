@@ -4,14 +4,14 @@ layout: home
 hero:
   name: "Cijinx"
   text: "Cijinx's Blog"
-  tagline: My great project tagline
+  tagline: 记录有趣的事情
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 文档示例
+      link: /vitepress/markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: API 示例
+      link: /vitepress/api-examples
 
 features:
   - title: Feature A
