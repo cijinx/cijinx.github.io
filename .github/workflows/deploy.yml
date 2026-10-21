@@ -31,13 +31,13 @@ jobs:
           node-version: 24
           cache: npm
       - name: 配置 Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: 下载依赖
         run: npm ci
       - name: 构建
         run: npm run docs:build
       - name: 上传
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: docs/.vitepress/dist
 
