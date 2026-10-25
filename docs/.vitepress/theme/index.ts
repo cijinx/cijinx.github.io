@@ -3,7 +3,7 @@ import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 // @ts-ignore: CSS
-import "./style.css";
+import "./style/index.css";
 
 export default {
   extends: DefaultTheme,

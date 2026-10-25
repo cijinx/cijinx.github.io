@@ -1,12 +1,16 @@
 {
   "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "^21.2.3",
-    "@commitlint/config-conventional": "^21.2.3",
-    "@commitlint/prompt-cli": "^21.2.3",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@commitlint/prompt-cli": "^21.2.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "autoprefixer": "^10.6.1",
     "husky": "^9.1.7",
-    "vitepress": "^2.0.0-alpha.20",
-    "vue": "^3.5.43"
+    "postcss": "^8.5.31",
+    "tailwindcss": "^4.3.3",
+    "vitepress": "^2.0.0-alpha.21",
+    "vue": "^3.5.44"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
