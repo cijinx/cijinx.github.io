@@ -1,0 +1,5 @@
+/* .vitepress/theme/custom.css */
+:root {
+    --vp-nav-bg-color: color-mix(in srgb, var(--vp-c-bg) 60%, transparent);
+    --vp-nav-backdrop-filter: saturate(180%) blur(8px);
+}

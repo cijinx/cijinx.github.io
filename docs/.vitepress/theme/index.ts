@@ -4,6 +4,7 @@ import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 // @ts-ignore: CSS
 import "./style/index.css";
+import "./style/custom.css";
 
 export default {
   extends: DefaultTheme,
